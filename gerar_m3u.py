@@ -22,7 +22,7 @@ OUTPUT = Path(os.getenv("M3U_OUTPUT", "lista.m3u"))
 STATE = Path(os.getenv("STATE_FILE", "canais.json"))
 TIMEOUT = float(os.getenv("HTTP_TIMEOUT", "15"))
 STREAM_TIMEOUT = float(os.getenv("STREAM_TIMEOUT", "12"))
-MAX_PAGES = int(os.getenv("MAX_PAGES", "250"))
+MAX_PAGES = int(os.getenv("MAX_PAGES", "500"))
 MAX_STATIONS = int(os.getenv("MAX_STATIONS", "10000"))
 WORKERS = int(os.getenv("VALIDATION_WORKERS", "12"))
 FAILS_TO_REMOVE = int(os.getenv("FAILS_TO_REMOVE", "2"))
@@ -94,18 +94,77 @@ def fetch(url: str):
 
 
 def station_links(html: str, page_url: str) -> set[str]:
+    """Find station routes in normal HTML, SPA/RSC payloads and escaped JSON."""
     soup=BeautifulSoup(html,"html.parser")
     found=set()
+
+    # Normal anchors.
     for a in soup.select("a[href]"):
-        u=urljoin(page_url,a.get("href"))
+        u=urljoin(page_url,a.get("href") or "")
         if internal(u) and "/station/" in urlparse(u).path:
             found.add(u.split("#")[0])
-    # Some SPAs put routes in script text rather than anchors.
-    for m in re.findall(r'(?:(?:href|url|path|stationUrl|station_url)\s*[:=]\s*["\'])([^"\']+)',html,re.I):
-        u=urljoin(page_url,m)
-        if internal(u) and "/station/" in urlparse(u).path: found.add(u)
+
+    # The current XTTV frontend can keep routes inside JS/JSON/RSC rather than anchors.
+    text=html.replace("\\/","/").replace("\\u002F","/").replace("\\u002f","/")
+    patterns=(
+        r'https?://[^"\'\\\s<>]+/station/[A-Za-z0-9._~%-]+',
+        r'(?<![A-Za-z0-9_-])/station/[A-Za-z0-9._~%-]+',
+        r'(?:stationUrl|station_url|href|url|path|slug)\\?[:=]\\?\s*["\']([^"\']*/station/[^"\']+)',
+    )
+    for pat in patterns:
+        for m in re.findall(pat,text,re.I):
+            raw=m if isinstance(m,str) else m[0]
+            u=urljoin(page_url,raw)
+            if internal(u) and "/station/" in urlparse(u).path:
+                found.add(u.split("#")[0])
+
+    # Last-resort route extraction, including RSC chunks with escaped quotes.
+    for m in re.finditer(r'/station/([A-Za-z0-9._~%-]+)', text, re.I):
+        u=urljoin(page_url,m.group(0))
+        if internal(u): found.add(u.split("#")[0])
     return found
 
+
+def api_urls_from_html(html: str, page_url: str) -> set[str]:
+    """Discover public GET API endpoints referenced by the frontend."""
+    soup=BeautifulSoup(html,"html.parser")
+    out=set()
+    candidates=[]
+    for tag in soup.find_all("script",src=True):
+        candidates.append(urljoin(page_url,tag.get("src")))
+    # Inline references and absolute/relative API paths.
+    blob=html.replace("\\/","/").replace("\\u002F","/").replace("\\u002f","/")
+    for m in re.findall(r'https?://[^"\'\\\s<>]+/api/[A-Za-z0-9_./?=&%-]+|/api/[A-Za-z0-9_./?=&%-]+',blob,re.I):
+        u=urljoin(page_url,m)
+        if internal(u): out.add(u)
+    # Fetch JS bundles and inspect endpoint strings. This is intentionally bounded.
+    for js in candidates[:30]:
+        r=fetch(js)
+        if not r: continue
+        body=r.text.replace("\\/","/").replace("\\u002F","/").replace("\\u002f","/")
+        for m in re.findall(r'https?://[^"\'\\\s<>]+/api/[A-Za-z0-9_./?=&%-]+|/api/[A-Za-z0-9_./?=&%-]+',body,re.I):
+            u=urljoin(page_url,m)
+            if internal(u): out.add(u)
+    return out
+
+
+def extract_json_objects(html: str) -> list[Any]:
+    """Parse obvious JSON script blocks without requiring a specific frontend framework."""
+    out=[]
+    soup=BeautifulSoup(html,"html.parser")
+    for tag in soup.find_all("script"):
+        typ=(tag.get("type") or "").lower()
+        raw=tag.string or tag.get_text() or ""
+        if typ in {"application/json","application/ld+json"}:
+            try: out.append(json.loads(raw))
+            except Exception: pass
+    # Next.js data / generic JSON-looking assignments.
+    for m in re.findall(r'<script[^>]*>\s*(?:self\.__next_f\.push\(\[.*?,\s*)?[\'\"](.{50,})[\'\"]\s*\)?\s*</script>',html,re.I|re.S):
+        try:
+            x=bytes(m,"utf-8").decode("unicode_escape")
+            if x.lstrip().startswith(("{","[")): out.append(json.loads(x))
+        except Exception: pass
+    return out
 
 def next_pages(html: str, page_url: str) -> set[str]:
     soup=BeautifulSoup(html,"html.parser"); out=set()
@@ -131,25 +190,81 @@ def synthetic_pages() -> list[str]:
     return urls
 
 
+def probe_api(url: str) -> tuple[set[str], set[str]]:
+    """Probe an API URL with common pagination styles and extract station routes."""
+    stations=set(); pages=set(); base=url
+    candidates=[base]
+    parsed=urlparse(base)
+    if not parsed.query:
+        for q in ("limit=100","page=1&limit=100","offset=0&limit=100","page=1","offset=0"):
+            candidates.append(urlunparse(parsed._replace(query=q)))
+    for u in candidates[:8]:
+        r=fetch(u)
+        if not r: continue
+        body=r.text
+        stations |= station_links(body,r.url)
+        # APIs often return station slugs/URLs as JSON, without HTML links.
+        try:
+            data=r.json()
+            blob=json.dumps(data,ensure_ascii=False)
+            stations |= station_links(blob,r.url)
+            for _,v,_ in walk_json(data):
+                if isinstance(v,str):
+                    vv=unescape(v).replace("\\/","/")
+                    if "/station/" in vv:
+                        x=urljoin(r.url,vv)
+                        if internal(x): stations.add(x.split("#")[0])
+            # Generate pagination URLs only when response suggests more data.
+            if isinstance(data,dict):
+                textblob=json.dumps(data).lower()
+                if any(k in textblob for k in ("next","hasnext","totalpages","total_count","totalcount","has_more")):
+                    for key in ("page","pagina"):
+                        for n in range(2,51):
+                            pages.add(urlunparse(parsed._replace(query=urlencode({key:n,"limit":100}))))
+        except Exception:
+            pass
+    return stations,pages
+
+
 def walk_catalog() -> tuple[set[str], dict[str,str]]:
-    queue=deque([EXPLORE]); seen=set(); stations=set(); pages=0
+    queue=deque([EXPLORE]); seen=set(); stations=set(); pages=0; api_seen=set(); quiet=0
     while queue and pages < MAX_PAGES:
         url=queue.popleft()
         if url in seen: continue
         seen.add(url); pages += 1
         r=fetch(url)
         if not r: continue
-        sl=station_links(r.text,r.url); stations |= sl
+        before=len(stations)
+        stations |= station_links(r.text,r.url)
         for p in next_pages(r.text,r.url):
             if p not in seen: queue.append(p)
-        # Explore all hidden pagination offsets only until no new station is found for a stretch.
+        for api in api_urls_from_html(r.text,r.url):
+            if api not in api_seen and len(api_seen)<40:
+                api_seen.add(api)
+                s,pages2=probe_api(api); stations |= s
+                for p in pages2:
+                    if p not in seen: queue.append(p)
+        # Structured data may contain station URLs even when the HTML has no anchors.
+        for obj in extract_json_objects(r.text):
+            for _,v,_ in walk_json(obj):
+                if isinstance(v,str) and "/station/" in v:
+                    u=urljoin(r.url,v)
+                    if internal(u): stations.add(u.split("#")[0])
+        quiet = quiet + 1 if len(stations)==before else 0
         if url == EXPLORE:
-            queue.extend(synthetic_pages())
-        if len(stations) >= MAX_STATIONS: break
+            # Only seed a modest number of pagination variants; never burn 250 requests
+            # against a page that is not paginated.
+            for n in range(1,51):
+                for key in ("page","pagina"):
+                    queue.append(f"{EXPLORE}?{key}={n}")
+            for offset in range(0,2500,100):
+                queue.append(f"{EXPLORE}?offset={offset}&limit=100")
         if pages % 25 == 0: log.info("Descoberta: %d páginas | %d estações",pages,len(stations))
-    log.info("Descoberta concluída: %d páginas | %d estações",pages,len(stations))
-    return stations, {}
-
+        if len(stations) >= MAX_STATIONS: break
+        if pages > 60 and quiet >= 40 and not api_seen:
+            break
+    log.info("Descoberta concluída: %d páginas | %d estações | %d APIs",pages,len(stations),len(api_seen))
+    return stations, {"api_count":str(len(api_seen))}
 
 def walk_json(obj: Any, path=""):
     if isinstance(obj, dict):
