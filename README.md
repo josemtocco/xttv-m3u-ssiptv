@@ -1,51 +1,49 @@
-# XTTV → M3U para SS IPTV
+# XTTV → M3U para SS IPTV — versão definitiva
 
-Projeto GitHub para coletar os canais disponíveis no XTTV por **todos os gêneros e todas as páginas de cada gênero**, gerar uma playlist M3U compatível com SS IPTV e atualizar automaticamente a cada 6 horas.
+Projeto GitHub Actions para coletar o catálogo público do **XTTV**, percorrer os gêneros e paginações, descobrir dados carregados por JavaScript/API, abrir as estações e capturar URLs públicas de reprodução expostas pela própria página, gerando `lista.m3u` para SS IPTV.
 
-## Como a coleta funciona
+## O que esta versão faz
 
-1. Abre `https://xttv.com.br/generos`.
-2. Descobre as categorias reais e elimina URLs duplicadas/variações de codificação.
-3. Abre uma categoria.
-4. Aguarda o conteúdo dinâmico carregar e força o carregamento de cartões lazy-load.
-5. Coleta as estações da página atual em `href`, `data-*`, HTML/JSON renderizado e recursos carregados.
-6. Procura o controle **Próxima/Next/Seguinte** e clica nele.
-7. Confirma que a página/conteúdo mudou.
-8. Repete a coleta até não existir mais Próxima, até a paginação repetir ou atingir o limite de segurança.
-9. Só depois passa para a próxima categoria.
-10. Abre cada estação, tenta iniciar **Tocar/Play/Ao Vivo** e captura URLs de transmissão carregadas pelo navegador.
-11. Gera `lista.m3u` com `tvg-name` e nome exibido iguais ao nome do canal e `group-title` da categoria.
-
-### Proteção contra falhas
-
-- Se uma categoria retornar zero estações por falha de carregamento, isso é registrado.
-- Se **todas** as categorias retornarem zero, a execução falha e a playlist anterior não é apagada.
-- Canais antigos são preservados temporariamente por `FAILS_TO_REMOVE` execuções antes de serem removidos.
-- Páginas repetidas não causam loop infinito.
+- abre `https://xttv.com.br/generos`;
+- descobre as categorias/gêneros disponíveis;
+- percorre cada categoria;
+- percorre todas as páginas disponíveis, procurando o controle **Próxima/Next**;
+- captura respostas JSON feitas pelo navegador para descobrir estações quando elas não aparecem como links no HTML;
+- abre cada página `/station/...` encontrada;
+- observa requisições de rede durante a abertura e após clicar em **Tocar / Play / Ao Vivo / Assistir**;
+- coleta URLs públicas HLS (`.m3u8`) e outros endpoints de mídia expostos pela página;
+- grava nome, logo e gênero;
+- gera M3U UTF-8 com `tvg-id`, `tvg-name`, `tvg-logo` e `group-title`;
+- mantém estado em `canais.json`;
+- não apaga imediatamente um canal por uma falha temporária: são necessárias `FAILS_TO_REMOVE` falhas consecutivas;
+- executa automaticamente a cada 6 horas;
+- usa `ubuntu-24.04`, evitando a futura mudança automática do `ubuntu-latest`.
 
 ## Arquivos
 
-- `gerar_m3u.py` — coletor e gerador da playlist.
-- `canais.json` — estado incremental.
-- `lista.m3u` — playlist final.
+- `gerar_m3u.py` — coletor completo e gerador M3U.
+- `canais.json` — estado persistente dos canais válidos.
+- `lista.m3u` — playlist para SS IPTV.
+- `requirements.txt` — Playwright.
 - `.github/workflows/atualizar.yml` — atualização automática.
-- `requirements.txt` — dependências.
+- `xttv_debug/` — inventário de respostas de API/rede gerado durante cada execução.
 
-## Execução manual
+## Publicar no GitHub
 
-```bash
-pip install -r requirements.txt
-python -m playwright install --with-deps chromium
-python gerar_m3u.py
-```
+Coloque os arquivos na raiz do repositório e mantenha `.github/workflows/atualizar.yml` no local indicado. Faça o primeiro `Run workflow` manualmente em **Actions → Atualizar M3U XTTV**.
 
-## Configurações opcionais
+Depois, se o GitHub Pages estiver habilitado para `main/root`, a playlist poderá ser usada em uma URL como:
 
-- `MAX_CATEGORY_PAGES=200`
-- `CONCURRENCY=4`
-- `FAILS_TO_REMOVE=2`
-- `PAGE_TIMEOUT_MS=60000`
-- `WAIT_CATEGORY_MS=3500`
-- `WAIT_NEXT_MS=1800`
+`https://SEU_USUARIO.github.io/SEU_REPOSITORIO/lista.m3u`
 
-O projeto não substitui uma playlist válida quando uma execução sofre uma falha de descoberta.
+## Atualização
+
+O cron é `0 */6 * * *`, portanto roda a cada 6 horas em UTC. Também é possível executar manualmente.
+
+## Segurança e limites
+
+O projeto trabalha somente com páginas e recursos públicos expostos pelo XTTV. Não tenta contornar login, DRM, paywall ou controles de acesso.
+
+## Diagnóstico
+
+A pasta `xttv_debug` contém `api_respostas.json` e `streams_rede.json`. Se uma mudança no XTTV impedir a descoberta, esses arquivos mostram quais endpoints foram observados na execução e permitem adaptar o coletor sem voltar ao método antigo de procurar apenas links no HTML.
