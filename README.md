@@ -1,55 +1,33 @@
 # XTTV → M3U para SS IPTV
 
-Projeto para gerar automaticamente uma lista M3U a partir do catálogo público do XTTV (`https://xttv.com.br/explorar`), pronta para uso no SS IPTV.
+Scraper para `https://xttv.com.br/generos`.
 
-## O que faz
+## Como funciona
 
-- varre o catálogo e paginações, sem limitar a descoberta aos primeiros 8 canais;
-- abre as páginas individuais das estações e tenta localizar os streams públicos expostos pela própria página;
-- usa o nome da estação e as categorias/gêneros encontrados no site;
-- valida os streams antes de publicar;
-- mantém canais anteriormente válidos quando uma execução sofre uma falha temporária de descoberta;
-- remove canais que falham consecutivamente conforme `FAILS_TO_REMOVE`;
-- adiciona automaticamente canais novos;
-- gera `lista.m3u` em UTF-8, com `tvg-name`, `tvg-logo`, `group-title` e `tvg-id`;
-- ordena a lista por categoria e nome, formato adequado para SS IPTV;
-- roda automaticamente a cada 6 horas pelo GitHub Actions.
+1. Abre a página **Gêneros**.
+2. Descobre os gêneros disponíveis.
+3. Entra em cada gênero, um por vez.
+4. Analisa **100% da página atual** e coleta todos os links de estações.
+5. Procura o controle **Próxima/Next** e **clica nele**.
+6. Confirma que a página/conteúdo mudou antes de continuar.
+7. Repete até não existir mais próxima página.
+8. Só depois passa ao próximo gênero.
+9. Abre cada estação e tenta acionar **Tocar/Play/Ao Vivo** para capturar streams carregados dinamicamente.
+10. Gera `lista.m3u` com `tvg-name` e nome de exibição iguais ao nome da estação.
+11. Mantém o estado em `canais.json`, preservando temporariamente canais que falharem em uma execução e removendo-os após `FAILS_TO_REMOVE` falhas consecutivas.
 
-> O coletor não tenta contornar login, DRM, paywall ou qualquer mecanismo de controle de acesso. Ele usa somente URLs públicas encontradas no catálogo/páginas da fonte.
+### Paginação
+
+A paginação é deliberadamente sequencial. O scraper não assume que `?page=2`, `?page=3` etc. sejam suficientes: ele deve analisar a página visível e acionar o controle de próxima página do próprio site. Também existe proteção contra página repetida e limite de segurança configurável.
+
+## GitHub Actions
+
+Atualização automática a cada 6 horas e também manual pelo botão **Run workflow**.
 
 ## Arquivos
 
-- `gerar_m3u.py` — coletor e gerador.
-- `requirements.txt` — dependências.
-- `lista.m3u` — lista publicada para o SS IPTV.
-- `canais.json` — estado persistente usado para evitar perda de canais por falhas temporárias.
-- `.github/workflows/atualizar.yml` — execução automática a cada 6 horas.
-
-## GitHub Pages
-
-Ative **Settings → Pages → Deploy from a branch → main/root**. Depois, a URL da lista será:
-
-`https://SEU_USUARIO.github.io/SEU_REPOSITORIO/lista.m3u`
-
-Essa URL pode ser cadastrada no SS IPTV como lista externa.
-
-## Execução local
-
-```bash
-python -m pip install -r requirements.txt
-python gerar_m3u.py
-```
-
-## Configurações por variável de ambiente
-
-- `VALIDATE_STREAMS=true` — valida os streams (`false` para apenas descobrir).
-- `FAILS_TO_REMOVE=2` — número de falhas consecutivas para remover um canal.
-- `MAX_PAGES=250` — limite de páginas/rotas de catálogo exploradas.
-- `MAX_STATIONS=10000` — limite de estações descobertas.
-- `VALIDATION_WORKERS=12` — reservado para futuras versões paralelas; a versão atual usa processamento sequencial para reduzir carga na fonte.
-- `HTTP_TIMEOUT=15` — timeout das páginas.
-- `STREAM_TIMEOUT=12` — timeout da validação dos streams.
-
-## Observação sobre as 6 horas
-
-O agendamento está configurado para `00:00, 06:00, 12:00 e 18:00 UTC`. O GitHub Actions usa UTC; isso equivale a 21:00, 03:00, 09:00 e 15:00 no horário de Brasília durante UTC-3. A execução manual também fica disponível em **Actions → Atualizar M3U → Run workflow**.
+- `gerar_m3u.py` — scraper e gerador da M3U
+- `lista.m3u` — playlist gerada
+- `canais.json` — estado incremental
+- `.github/workflows/atualizar.yml` — atualização automática
+- `requirements.txt` — dependência Playwright

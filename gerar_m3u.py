@@ -1,456 +1,288 @@
-#!/usr/bin/env python3
-"""Discover XTTV stations, validate public streams and generate an SS IPTV M3U.
-
-The collector intentionally does not bypass authentication, DRM, paywalls or access controls.
-It only republishes public stream URLs exposed by XTTV pages/API responses.
-"""
-from __future__ import annotations
-import json, logging, os, re, sys, time
-from collections import defaultdict, deque
-from dataclasses import dataclass, asdict
-from html import unescape
+import asyncio, json, logging, os, re, time
 from pathlib import Path
-from typing import Any
-from urllib.parse import urljoin, urlparse, parse_qs, urlencode, urlunparse
+from urllib.parse import urljoin, urlparse, parse_qsl, urlencode, urlunparse
 
-import requests
-from bs4 import BeautifulSoup
+from playwright.async_api import async_playwright
 
-BASE = os.getenv("XTTV_BASE_URL", "https://xttv.com.br").rstrip("/")
-EXPLORE = f"{BASE}/explorar"
-OUTPUT = Path(os.getenv("M3U_OUTPUT", "lista.m3u"))
-STATE = Path(os.getenv("STATE_FILE", "canais.json"))
-TIMEOUT = float(os.getenv("HTTP_TIMEOUT", "15"))
-STREAM_TIMEOUT = float(os.getenv("STREAM_TIMEOUT", "12"))
-MAX_PAGES = int(os.getenv("MAX_PAGES", "500"))
-MAX_STATIONS = int(os.getenv("MAX_STATIONS", "10000"))
-WORKERS = int(os.getenv("VALIDATION_WORKERS", "12"))
-FAILS_TO_REMOVE = int(os.getenv("FAILS_TO_REMOVE", "2"))
-VALIDATE = os.getenv("VALIDATE_STREAMS", "true").lower() not in {"0", "false", "no"}
-USER_AGENT = os.getenv("USER_AGENT", "XTTV-M3U-Collector/1.0 (+GitHub Actions)")
+BASE='https://xttv.com.br'
+GENRES_URL=f'{BASE}/generos'
+STATE=Path('canais.json')
+M3U=Path('lista.m3u')
+MAX_CATEGORY_PAGES=int(os.getenv('MAX_CATEGORY_PAGES','200'))
+CONCURRENCY=int(os.getenv('CONCURRENCY','4'))
+HEADLESS=os.getenv('HEADLESS','1') != '0'
+FAILS_TO_REMOVE=int(os.getenv('FAILS_TO_REMOVE','2'))
+TIMEOUT=int(os.getenv('PAGE_TIMEOUT_MS','45000'))
+NEXT_WAIT_MS=int(os.getenv('NEXT_WAIT_MS','1200'))
 
-logging.basicConfig(level=os.getenv("LOG_LEVEL", "INFO"), format="%(asctime)s | %(levelname)s | %(message)s")
-log = logging.getLogger("xttv-m3u")
+logging.basicConfig(level=logging.INFO, format='%(asctime)s | %(levelname)s | %(message)s')
+log=logging.getLogger('xttv')
 
-SESSION = requests.Session()
-SESSION.headers.update({"User-Agent": USER_AGENT, "Accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8"})
-
-URL_RE = re.compile(r'https?://[^\s"\'<>\\]+', re.I)
-STREAM_RE = re.compile(r'https?://[^\s"\'<>\\]+(?:\.m3u8(?:\?[^\s"\'<>\\]*)?|\.mpd(?:\?[^\s"\'<>\\]*)?|\.m3u(?:\?[^\s"\'<>\\]*)?|\.ts(?:\?[^\s"\'<>\\]*)?|\.aac(?:\?[^\s"\'<>\\]*)?|\.mp4(?:\?[^\s"\'<>\\]*)?)', re.I)
-IMAGE_RE = re.compile(r'https?://[^\s"\'<>\\]+\.(?:png|jpe?g|webp|gif|svg)(?:\?[^\s"\'<>\\]*)?$', re.I)
-
-@dataclass
-class Channel:
-    id: str
-    name: str
-    stream_url: str
-    categories: list[str]
-    logo: str = ""
-    station_url: str = ""
-    tvg_id: str = ""
-    failures: int = 0
-    last_ok: str = ""
+STREAM_RE=re.compile(r'https?://[^\s"\'<>\\]+(?:\.m3u8(?:\?[^\s"\'<>\\]*)?|\.mpd(?:\?[^\s"\'<>\\]*)?|\.mp3(?:\?[^\s"\'<>\\]*)?|\.aac(?:\?[^\s"\'<>\\]*)?|\.aacp(?:\?[^\s"\'<>\\]*)?)', re.I)
+STATION_RE=re.compile(r'https?://xttv\.com\.br/station/[A-Za-z0-9._~/%+-]+', re.I)
+NEXT_WORDS={'próxima','proxima','próximo','proximo','next','seguinte','›','»','→'}
+PLAY_WORDS=('tocar','play','ao vivo','ouvir','assistir','iniciar')
 
 
-def clean(s: Any) -> str:
-    if s is None:
-        return ""
-    s = unescape(str(s)).strip()
-    return re.sub(r"\s+", " ", s)
+def clean_url(u):
+    return (u or '').rstrip('.,);]}>\'"')
 
+def norm_url(u):
+    if not u: return ''
+    if u.startswith('//'): return 'https:'+u
+    return urljoin(BASE, u)
 
-def unique(values):
-    out=[]; seen=set()
-    for v in values:
-        v=clean(v)
-        if not v: continue
-        k=v.casefold()
-        if k not in seen:
-            seen.add(k); out.append(v)
+def load_state():
+    if not STATE.exists(): return {}
+    try: return json.loads(STATE.read_text(encoding='utf-8'))
+    except Exception: return {}
+
+def save_state(data):
+    tmp=STATE.with_suffix('.tmp')
+    tmp.write_text(json.dumps(data,ensure_ascii=False,indent=2,sort_keys=True),encoding='utf-8')
+    tmp.replace(STATE)
+
+def esc(s):
+    return str(s or '').replace('\\',' ').replace('"','').replace('\r',' ').replace('\n',' ').strip()
+
+def station_key(url): return url.rstrip('/').lower()
+
+def looks_station(u): return '/station/' in u and urlparse(u).netloc.endswith('xttv.com.br')
+
+def looks_stream(u):
+    x=u.lower()
+    return any(k in x for k in ('.m3u8','.mpd','.mp3','.aac','.aacp')) or any(k in x for k in ('stream','live','playlist','hls'))
+
+def page_signature(text, links):
+    names=' '.join(sorted(links))
+    return re.sub(r'\s+',' ',text or '')[:3000]+'|'+names
+
+async def extract_station_links(page):
+    out=set()
+    for a in await page.locator('a').all():
+        try:
+            href=await a.get_attribute('href')
+            if href:
+                u=clean_url(norm_url(href))
+                if looks_station(u): out.add(u)
+        except Exception: pass
+    try:
+        html=await page.content()
+        for u in STATION_RE.findall(html): out.add(clean_url(u))
+    except Exception: pass
     return out
 
-
-def normalize_url(url: str) -> str:
-    url = unescape(url).strip().rstrip(".,;)")
-    if url.startswith("//"): url = "https:" + url
-    return url
-
-
-def internal(url: str) -> bool:
-    try: return urlparse(url).netloc.lower() == urlparse(BASE).netloc.lower()
-    except: return False
-
-
-def fetch(url: str):
+async def discover_categories(page):
+    await page.goto(GENRES_URL,wait_until='domcontentloaded',timeout=TIMEOUT)
+    await page.wait_for_timeout(2500)
+    for _ in range(8):
+        await page.mouse.wheel(0,1800); await page.wait_for_timeout(350)
+    cats={}
+    for el in await page.locator('a,button,[role="button"]').all():
+        try:
+            txt=re.sub(r'\s+',' ',(await el.inner_text()).strip())
+            if not txt or len(txt)>100: continue
+            href=await el.get_attribute('href')
+            candidates=[]
+            if href: candidates.append(href)
+            for attr in ('data-href','data-url','data-link','data-route','onclick'):
+                v=await el.get_attribute(attr)
+                if v: candidates += re.findall(r'https?://xttv\.com\.br[^\s"\'<>]+|/[^\s"\'<>]+',v)
+            for raw in candidates:
+                u=clean_url(norm_url(raw))
+                lowtxt=txt.lower()
+                if (urlparse(u).netloc.endswith('xttv.com.br') and '/station/' not in u
+                    and u.rstrip('/') != GENRES_URL.rstrip('/')
+                    and not any(x in lowtxt for x in ('início','inicio','explorar','buscar','login','contato','sugerir','termos','política','politica'))):
+                    # Only accept likely genre routes or buttons without a normal route.
+                    path=urlparse(u).path.lower()
+                    if '/genero' in path or '/generos/' in path:
+                        cats.setdefault(txt,u)
+        except Exception: pass
     try:
-        r=SESSION.get(url,timeout=TIMEOUT,allow_redirects=True)
-        if r.status_code >= 400:
-            log.debug("HTTP %s %s",r.status_code,url)
-            return None
-        return r
-    except requests.RequestException as e:
-        log.debug("Falha HTTP %s: %s",url,e)
-        return None
+        html=await page.content()
+        for m in re.finditer(r'(?:href|data-href|data-url|data-route)=["\']([^"\']+)["\']',html,re.I):
+            u=clean_url(norm_url(m.group(1)))
+            if '/genero' in urlparse(u).path.lower() and u.rstrip('/') != GENRES_URL.rstrip('/'):
+                label=urlparse(u).path.rstrip('/').split('/')[-1].replace('-',' ').strip().title()
+                if label: cats.setdefault(label,u)
+    except Exception: pass
+    log.info('Categorias encontradas: %d',len(cats))
+    for n,u in cats.items(): log.info('Categoria: %s -> %s',n,u)
+    return cats
 
+async def element_disabled(el):
+    try:
+        if await el.is_disabled(): return True
+    except Exception: pass
+    for attr in ('disabled','aria-disabled','data-disabled'):
+        try:
+            v=await el.get_attribute(attr)
+            if v is not None and str(v).lower() in ('','true','1','disabled'): return True
+        except Exception: pass
+    try:
+        cls=(await el.get_attribute('class') or '').lower()
+        if any(x in cls for x in ('disabled','is-disabled','cursor-not-allowed')): return True
+    except Exception: pass
+    return False
 
-def station_links(html: str, page_url: str) -> set[str]:
-    """Find station routes in normal HTML, SPA/RSC payloads and escaped JSON."""
-    soup=BeautifulSoup(html,"html.parser")
-    found=set()
+async def find_next_control(page):
+    selectors='a,button,[role="button"]'
+    best=None
+    for el in await page.locator(selectors).all():
+        try:
+            txt=re.sub(r'\s+',' ',(await el.inner_text()).strip()).lower()
+            aria=(await el.get_attribute('aria-label') or '').strip().lower()
+            title=(await el.get_attribute('title') or '').strip().lower()
+            data=(await el.get_attribute('data-testid') or '').strip().lower()
+            marker=' '.join(x for x in (txt,aria,title,data) if x)
+            if any(w in marker for w in NEXT_WORDS) and not await element_disabled(el):
+                # Ignore previous/back controls.
+                if any(w in marker for w in ('anterior','previous','voltar','back')): continue
+                best=el; break
+        except Exception: pass
+    return best
 
-    # Normal anchors.
-    for a in soup.select("a[href]"):
-        u=urljoin(page_url,a.get("href") or "")
-        if internal(u) and "/station/" in urlparse(u).path:
-            found.add(u.split("#")[0])
+async def click_next_and_wait(page, before_url, before_sig):
+    nxt=await find_next_control(page)
+    if not nxt: return False
+    try:
+        await nxt.scroll_into_view_if_needed()
+    except Exception: pass
+    try:
+        await nxt.click(timeout=TIMEOUT)
+    except Exception:
+        try: await nxt.click(force=True,timeout=TIMEOUT)
+        except Exception: return False
+    # The site may navigate or update the listing in place.
+    try: await page.wait_for_load_state('domcontentloaded',timeout=8000)
+    except Exception: pass
+    deadline=time.monotonic()+12
+    while time.monotonic()<deadline:
+        await page.wait_for_timeout(NEXT_WAIT_MS)
+        try:
+            links=await extract_station_links(page)
+            body=await page.locator('body').inner_text()
+            sig=page_signature(body,links)
+            if page.url != before_url or sig != before_sig:
+                return True
+        except Exception: pass
+    return False
 
-    # The current XTTV frontend can keep routes inside JS/JSON/RSC rather than anchors.
-    text=html.replace("\\/","/").replace("\\u002F","/").replace("\\u002f","/")
-    patterns=(
-        r'https?://[^"\'\\\s<>]+/station/[A-Za-z0-9._~%-]+',
-        r'(?<![A-Za-z0-9_-])/station/[A-Za-z0-9._~%-]+',
-        r'(?:stationUrl|station_url|href|url|path|slug)\\?[:=]\\?\s*["\']([^"\']*/station/[^"\']+)',
-    )
-    for pat in patterns:
-        for m in re.findall(pat,text,re.I):
-            raw=m if isinstance(m,str) else m[0]
-            u=urljoin(page_url,raw)
-            if internal(u) and "/station/" in urlparse(u).path:
-                found.add(u.split("#")[0])
-
-    # Last-resort route extraction, including RSC chunks with escaped quotes.
-    for m in re.finditer(r'/station/([A-Za-z0-9._~%-]+)', text, re.I):
-        u=urljoin(page_url,m.group(0))
-        if internal(u): found.add(u.split("#")[0])
+async def collect_category(page,name,url):
+    found=set(); seen_pages=set(); pages=0
+    await page.goto(url,wait_until='domcontentloaded',timeout=TIMEOUT)
+    await page.wait_for_timeout(1200)
+    while pages < MAX_CATEGORY_PAGES:
+        current_url=page.url
+        links=await extract_station_links(page)
+        body=''
+        try: body=await page.locator('body').inner_text()
+        except Exception: pass
+        sig=page_signature(body,links)
+        # Guard against looping on the same page.
+        page_id=current_url+'|'+sig
+        if page_id in seen_pages:
+            log.warning('Categoria %s: página repetida detectada; encerrando.',name)
+            break
+        seen_pages.add(page_id); pages += 1; found |= links
+        log.info('Categoria %s | página %d | %d estações encontradas nesta página | %d acumuladas',name,pages,len(links),len(found))
+        moved=await click_next_and_wait(page,current_url,sig)
+        if not moved:
+            break
+    if pages >= MAX_CATEGORY_PAGES:
+        log.warning('Categoria %s atingiu MAX_CATEGORY_PAGES=%d; verifique se há paginação maior.',name,MAX_CATEGORY_PAGES)
+    log.info('Categoria %s concluída: %d páginas analisadas | %d estações únicas',name,pages,len(found))
     return found
 
-
-def api_urls_from_html(html: str, page_url: str) -> set[str]:
-    """Discover public GET API endpoints referenced by the frontend."""
-    soup=BeautifulSoup(html,"html.parser")
-    out=set()
-    candidates=[]
-    for tag in soup.find_all("script",src=True):
-        candidates.append(urljoin(page_url,tag.get("src")))
-    # Inline references and absolute/relative API paths.
-    blob=html.replace("\\/","/").replace("\\u002F","/").replace("\\u002f","/")
-    for m in re.findall(r'https?://[^"\'\\\s<>]+/api/[A-Za-z0-9_./?=&%-]+|/api/[A-Za-z0-9_./?=&%-]+',blob,re.I):
-        u=urljoin(page_url,m)
-        if internal(u): out.add(u)
-    # Fetch JS bundles and inspect endpoint strings. This is intentionally bounded.
-    for js in candidates[:30]:
-        r=fetch(js)
-        if not r: continue
-        body=r.text.replace("\\/","/").replace("\\u002F","/").replace("\\u002f","/")
-        for m in re.findall(r'https?://[^"\'\\\s<>]+/api/[A-Za-z0-9_./?=&%-]+|/api/[A-Za-z0-9_./?=&%-]+',body,re.I):
-            u=urljoin(page_url,m)
-            if internal(u): out.add(u)
-    return out
-
-
-def extract_json_objects(html: str) -> list[Any]:
-    """Parse obvious JSON script blocks without requiring a specific frontend framework."""
-    out=[]
-    soup=BeautifulSoup(html,"html.parser")
-    for tag in soup.find_all("script"):
-        typ=(tag.get("type") or "").lower()
-        raw=tag.string or tag.get_text() or ""
-        if typ in {"application/json","application/ld+json"}:
-            try: out.append(json.loads(raw))
+async def station_details(browser,url,category_names):
+    page=await browser.new_page()
+    streams=set(); network=set()
+    try:
+        async def response_handler(resp):
+            u=resp.url
+            if looks_stream(u): network.add(clean_url(u))
+        page.on('response',response_handler)
+        await page.goto(url,wait_until='domcontentloaded',timeout=TIMEOUT)
+        await page.wait_for_timeout(1200)
+        # XTTV commonly exposes a Tocar/Play control. Trigger it so dynamically loaded streams appear.
+        for el in await page.locator('button,a,[role="button"]').all():
+            try:
+                marker=' '.join([(await el.inner_text()).strip().lower(),(await el.get_attribute('aria-label') or '').lower(),(await el.get_attribute('title') or '').lower()])
+                if any(w in marker for w in PLAY_WORDS):
+                    if not await element_disabled(el):
+                        await el.click(timeout=5000)
+                        await page.wait_for_timeout(2500)
+                        break
             except Exception: pass
-    # Next.js data / generic JSON-looking assignments.
-    for m in re.findall(r'<script[^>]*>\s*(?:self\.__next_f\.push\(\[.*?,\s*)?[\'\"](.{50,})[\'\"]\s*\)?\s*</script>',html,re.I|re.S):
-        try:
-            x=bytes(m,"utf-8").decode("unicode_escape")
-            if x.lstrip().startswith(("{","[")): out.append(json.loads(x))
-        except Exception: pass
-    return out
-
-def next_pages(html: str, page_url: str) -> set[str]:
-    soup=BeautifulSoup(html,"html.parser"); out=set()
-    for a in soup.select("a[href]"):
-        href=a.get("href"); label=clean(a.get_text(" ",strip=True)).lower()
-        if not href: continue
-        u=urljoin(page_url,href)
-        if not internal(u): continue
-        p=urlparse(u); path=p.path.lower(); qs=parse_qs(p.query)
-        if any(k in qs for k in ("page","offset","cursor","limit")) or any(x in label for x in ("próxima","proxima","next","mais","carregar")):
-            if path.startswith(("/explorar","/genero","/generos")): out.add(u)
-    return out
-
-
-def synthetic_pages() -> list[str]:
-    # Handles catalogs rendered from pagination/infinite-scroll APIs even when pagination links are hidden.
-    urls=[]
-    for page in range(1, MAX_PAGES+1):
-        for key in ("page", "pagina"):
-            urls.append(f"{EXPLORE}?{key}={page}")
-    for offset in range(0, MAX_PAGES*50, 50):
-        urls.append(f"{EXPLORE}?offset={offset}&limit=50")
-    return urls
-
-
-def probe_api(url: str) -> tuple[set[str], set[str]]:
-    """Probe an API URL with common pagination styles and extract station routes."""
-    stations=set(); pages=set(); base=url
-    candidates=[base]
-    parsed=urlparse(base)
-    if not parsed.query:
-        for q in ("limit=100","page=1&limit=100","offset=0&limit=100","page=1","offset=0"):
-            candidates.append(urlunparse(parsed._replace(query=q)))
-    for u in candidates[:8]:
-        r=fetch(u)
-        if not r: continue
-        body=r.text
-        stations |= station_links(body,r.url)
-        # APIs often return station slugs/URLs as JSON, without HTML links.
-        try:
-            data=r.json()
-            blob=json.dumps(data,ensure_ascii=False)
-            stations |= station_links(blob,r.url)
-            for _,v,_ in walk_json(data):
-                if isinstance(v,str):
-                    vv=unescape(v).replace("\\/","/")
-                    if "/station/" in vv:
-                        x=urljoin(r.url,vv)
-                        if internal(x): stations.add(x.split("#")[0])
-            # Generate pagination URLs only when response suggests more data.
-            if isinstance(data,dict):
-                textblob=json.dumps(data).lower()
-                if any(k in textblob for k in ("next","hasnext","totalpages","total_count","totalcount","has_more")):
-                    for key in ("page","pagina"):
-                        for n in range(2,51):
-                            pages.add(urlunparse(parsed._replace(query=urlencode({key:n,"limit":100}))))
-        except Exception:
-            pass
-    return stations,pages
-
-
-def walk_catalog() -> tuple[set[str], dict[str,str]]:
-    queue=deque([EXPLORE]); seen=set(); stations=set(); pages=0; api_seen=set(); quiet=0
-    while queue and pages < MAX_PAGES:
-        url=queue.popleft()
-        if url in seen: continue
-        seen.add(url); pages += 1
-        r=fetch(url)
-        if not r: continue
-        before=len(stations)
-        stations |= station_links(r.text,r.url)
-        for p in next_pages(r.text,r.url):
-            if p not in seen: queue.append(p)
-        for api in api_urls_from_html(r.text,r.url):
-            if api not in api_seen and len(api_seen)<40:
-                api_seen.add(api)
-                s,pages2=probe_api(api); stations |= s
-                for p in pages2:
-                    if p not in seen: queue.append(p)
-        # Structured data may contain station URLs even when the HTML has no anchors.
-        for obj in extract_json_objects(r.text):
-            for _,v,_ in walk_json(obj):
-                if isinstance(v,str) and "/station/" in v:
-                    u=urljoin(r.url,v)
-                    if internal(u): stations.add(u.split("#")[0])
-        quiet = quiet + 1 if len(stations)==before else 0
-        if url == EXPLORE:
-            # Only seed a modest number of pagination variants; never burn 250 requests
-            # against a page that is not paginated.
-            for n in range(1,51):
-                for key in ("page","pagina"):
-                    queue.append(f"{EXPLORE}?{key}={n}")
-            for offset in range(0,2500,100):
-                queue.append(f"{EXPLORE}?offset={offset}&limit=100")
-        if pages % 25 == 0: log.info("Descoberta: %d páginas | %d estações",pages,len(stations))
-        if len(stations) >= MAX_STATIONS: break
-        if pages > 60 and quiet >= 40 and not api_seen:
-            break
-    log.info("Descoberta concluída: %d páginas | %d estações | %d APIs",pages,len(stations),len(api_seen))
-    return stations, {"api_count":str(len(api_seen))}
-
-def walk_json(obj: Any, path=""):
-    if isinstance(obj, dict):
-        for k,v in obj.items():
-            yield k,v,path
-            yield from walk_json(v, f"{path}.{k}")
-    elif isinstance(obj, list):
-        for i,v in enumerate(obj): yield from walk_json(v,f"{path}[{i}]")
-
-
-def likely_stream(value: str, key: str="") -> bool:
-    v=value.lower(); k=key.lower()
-    if not v.startswith(("http://","https://")): return False
-    if any(x in k for x in ("stream","play","source","video","hls","m3u8","manifest","liveurl","media")): return True
-    return bool(re.search(r'\.(m3u8|mpd|m3u|ts|aac|mp4)(?:$|\?)',v))
-
-
-def parse_station(url: str) -> list[Channel]:
-    r=fetch(url)
-    if not r: return []
-    html=r.text; soup=BeautifulSoup(html,"html.parser")
-    title=clean((soup.find("meta",property="og:title") or {}).get("content") if soup.find("meta",property="og:title") else "")
-    if not title:
-        title=clean(soup.title.get_text() if soup.title else "")
-        title=re.sub(r"\s*[|\-–].*$", "", title).strip()
-    if not title or title.lower() in {"xttv","explorar"}: 
-        h=soup.find(["h1","h2"]); title=clean(h.get_text(" ",strip=True) if h else "Estação XTTV")
-
-    logos=[]
-    for sel in [("meta",{"property":"og:image"}),("meta",{"name":"twitter:image"})]:
-        tag=soup.find(*sel)
-        if tag and tag.get("content"): logos.append(urljoin(url,tag["content"]))
-    for im in soup.find_all("img",src=True):
-        u=urljoin(url,im.get("src"));
-        if IMAGE_RE.match(u): logos.append(u)
-    logo=next(iter(unique(logos)),"")
-
-    cats=[]
-    # Visible badges/categories plus structured data.
-    for tag in soup.select("[class*=genre i], [class*=categor i], [class*=tag i]"):
-        t=clean(tag.get_text(" ",strip=True));
-        if 1 <= len(t) <= 40: cats.append(t)
-
-    stream_candidates=[]; tvg_id=""
-    scripts=soup.find_all("script")
-    raw_parts=[html]
-    for s in scripts:
-        if s.string: raw_parts.append(s.string)
-        elif s.get_text(): raw_parts.append(s.get_text())
-    for raw in raw_parts:
-        for m in STREAM_RE.findall(raw): stream_candidates.append(normalize_url(m))
-        for m in URL_RE.findall(raw):
-            m=normalize_url(m)
-            if likely_stream(m): stream_candidates.append(m)
-        try:
-            data=json.loads(raw)
-            for k,v,_ in walk_json(data):
-                if isinstance(v,str) and likely_stream(v,k): stream_candidates.append(normalize_url(v))
-                elif isinstance(v,list) and any(isinstance(x,str) and likely_stream(x,k) for x in v):
-                    stream_candidates.extend(normalize_url(x) for x in v if isinstance(x,str) and likely_stream(x,k))
-                if isinstance(v,str) and k.lower() in {"name","title","stationname","station_name"} and not title: title=clean(v)
-                if isinstance(v,str) and k.lower() in {"tvgid","tvg_id","id","slug"}: tvg_id=clean(v)
-                if isinstance(v,list) and k.lower() in {"genres","genre","categories","tags"}: cats.extend(str(x) for x in v if isinstance(x,(str,int,float)))
-        except Exception:
-            pass
-    # HTML-encoded JSON and escaped URLs.
-    for raw in raw_parts:
-        raw=raw.replace('\\/','/')
-        for m in STREAM_RE.findall(raw): stream_candidates.append(normalize_url(m))
-
-    stream_candidates=unique(stream_candidates)
-    cats=unique([c for c in cats if c.lower() not in {title.lower(),"xttv","ao vivo"}])
-    if not cats: cats=["Sem categoria"]
-    if not stream_candidates: return []
-
-    sid=urlparse(url).path.rstrip('/').split('/')[-1]
-    return [Channel(id=f"{sid}|{u}",name=title,stream_url=u,categories=cats,logo=logo,station_url=url,tvg_id=tvg_id) for u in stream_candidates]
-
-
-def load_state() -> dict[str,Channel]:
-    if not STATE.exists(): return {}
-    try:
-        data=json.loads(STATE.read_text(encoding="utf-8"))
-        return {c["id"]:Channel(**c) for c in data if c.get("stream_url") and c.get("name")}
+        for _ in range(3): await page.mouse.wheel(0,1400); await page.wait_for_timeout(250)
+        html=await page.content()
+        streams |= {clean_url(x) for x in STREAM_RE.findall(html)}
+        for pat in [r'(?:stream|streamUrl|stream_url|url|source|src|hls|m3u8)["\']?\s*[:=]\s*["\']([^"\']+)',r'(https?://[^"\'<> ]+\.(?:m3u8|mpd)(?:\?[^"\'<> ]*)?)']:
+            for x in re.findall(pat,html,re.I):
+                x=norm_url(x.replace('\\/','/'))
+                if looks_stream(x): streams.add(clean_url(x))
+        title=''
+        for sel in ('h1','meta[property="og:title"]'):
+            try:
+                if sel.startswith('meta'): title=(await page.locator(sel).get_attribute('content') or '').strip()
+                else: title=(await page.locator(sel).first.inner_text()).strip()
+                if title: break
+            except Exception: pass
+        if not title:
+            title=(await page.title()).strip()
+        return {'url':url,'name':re.sub(r'\s+',' ',title).strip(),'categories':sorted(set(category_names)),'streams':sorted(streams|network)}
     except Exception as e:
-        log.warning("Não foi possível ler %s: %s",STATE,e); return {}
+        return {'url':url,'name':'','categories':sorted(set(category_names)),'streams':[],'error':str(e)}
+    finally: await page.close()
 
-
-def validate(url: str) -> tuple[bool,str]:
-    try:
-        # GET is used because several streaming servers reject HEAD.
-        r=SESSION.get(url,timeout=STREAM_TIMEOUT,allow_redirects=True,stream=True,headers={"Range":"bytes=0-2047"})
-        ok=r.status_code in {200,206,301,302,307,308}
-        ctype=(r.headers.get("content-type") or "").lower()
-        if ok and (url.lower().split("?",1)[0].endswith((".m3u8",".m3u")) or "mpegurl" in ctype or "x-mpegurl" in ctype):
-            chunk=next(r.iter_content(8192),b"")
-            text=chunk.decode("utf-8","ignore")
-            ok=ok and ("#EXTM3U" in text or "#EXT-X-" in text)
-        r.close(); return ok, f"HTTP {r.status_code}"
-    except requests.RequestException as e: return False, type(e).__name__
-
-
-def save_state(channels: list[Channel]):
-    channels=sorted(channels,key=lambda c:(c.categories[0].casefold() if c.categories else "",c.name.casefold(),c.stream_url))
-    STATE.write_text(json.dumps([asdict(c) for c in channels],ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-
-
-def m3u_quote(s: str) -> str: return clean(s).replace('"',"'")
-
-
-def write_m3u(channels: list[Channel]):
-    bycat=defaultdict(list)
-    for c in channels:
-        # Preserve every site category while using one M3U entry per category.
-        for cat in c.categories or ["Sem categoria"]: bycat[cat].append(c)
-    lines=["#EXTM3U"]
-    for cat in sorted(bycat,key=str.casefold):
-        seen=set()
-        for c in sorted(bycat[cat],key=lambda x:x.name.casefold()):
-            key=(c.name.casefold(),c.stream_url)
-            if key in seen: continue
-            seen.add(key)
-            attrs=[f'tvg-id="{m3u_quote(c.tvg_id or c.id.split("|")[0])}"',f'tvg-name="{m3u_quote(c.name)}"']
-            if c.logo: attrs.append(f'tvg-logo="{m3u_quote(c.logo)}"')
-            attrs.append(f'group-title="{m3u_quote(cat)}"')
-            lines.append(f'#EXTINF:-1 {" ".join(attrs)},{m3u_quote(c.name)}')
-            lines.append(c.stream_url)
-    tmp=OUTPUT.with_suffix(OUTPUT.suffix+".tmp")
-    tmp.write_text("\n".join(lines)+"\n",encoding="utf-8",newline="\n")
-    tmp.replace(OUTPUT)
-
-
-def main():
-    log.info("Fonte: %s",EXPLORE)
-    old=load_state(); log.info("Estado anterior: %d canais",len(old))
-    stations,_=walk_catalog()
-    discovered=[]
-    for i,url in enumerate(sorted(stations),1):
-        cs=parse_station(url)
-        if cs: discovered.extend(cs)
-        if i % 50 == 0: log.info("Estações analisadas: %d/%d | streams: %d",i,len(stations),len(discovered))
-    # De-duplicate by station+stream while keeping the newest metadata.
-    merged={c.id:c for c in discovered}
-    log.info("Streams descobertos: %d",len(merged))
-
-    if not merged and not old:
-        log.error("Nenhum canal descoberto na fonte; abortando para não gerar uma lista vazia.")
-        return 2
-
-    now=time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime())
-    if VALIDATE:
-        ok_count=0; fail_count=0
-        for idx,c in enumerate(list(merged.values()),1):
-            ok,why=validate(c.stream_url)
-            if ok:
-                c.failures=0; c.last_ok=now; ok_count+=1
-            else:
-                c.failures=old.get(c.id, c).failures + 1; fail_count+=1
-                log.debug("Inativo? %s -> %s",c.name,why)
-        log.info("Validação: %d OK | %d falharam",ok_count,fail_count)
-
-    # Start from newly discovered channels. For channels temporarily absent from discovery,
-    # keep them only if they were previously active; they are validated before retention.
-    final={}
-    for cid,c in merged.items():
-        if c.failures < FAILS_TO_REMOVE: final[cid]=c
-    # Preserve old active channels when the catalog page/API temporarily fails to expose them.
-    for cid,oldc in old.items():
-        if cid in final: continue
-        if cid not in merged:
-            if VALIDATE:
-                ok,why=validate(oldc.stream_url)
-                if ok:
-                    oldc.failures=0; oldc.last_ok=now; final[cid]=oldc
-                else:
-                    oldc.failures += 1
-                    if oldc.failures < FAILS_TO_REMOVE: final[cid]=oldc
-                    else: log.info("Removido por inatividade: %s",oldc.name)
-            else:
-                final[cid]=oldc
-    channels=list(final.values())
-    if not channels:
-        log.error("Após validação não restou nenhum canal; preservando o estado anterior para segurança.")
-        return 3
-    save_state(channels); write_m3u(channels)
-    log.info("M3U gerada: %d canais | %d categorias | %s",len(channels),len({x for c in channels for x in c.categories}),OUTPUT)
+async def main():
+    old=load_state(); log.info('Fonte: %s',GENRES_URL); log.info('Estado anterior: %d canais',len(old))
+    async with async_playwright() as pw:
+        browser=await pw.chromium.launch(headless=HEADLESS, executable_path=os.getenv('CHROMIUM_EXECUTABLE','/usr/bin/chromium'))
+        page=await browser.new_page(viewport={'width':1440,'height':1000})
+        cats=await discover_categories(page)
+        if not cats:
+            log.error('Nenhuma categoria encontrada em /generos.')
+            await browser.close(); return 2
+        allstations={}
+        for cname,curl in cats.items():
+            urls=await collect_category(page,cname,curl)
+            for u in urls:
+                k=station_key(u); allstations.setdefault(k,{'url':u,'categories':set()}); allstations[k]['categories'].add(cname)
+        log.info('Descoberta concluída: %d categorias | %d estações únicas',len(cats),len(allstations))
+        sem=asyncio.Semaphore(CONCURRENCY)
+        async def one(item):
+            async with sem: return await station_details(browser,item['url'],item['categories'])
+        results=[]; items=list(allstations.values())
+        for i in range(0,len(items),CONCURRENCY*3):
+            results.extend(await asyncio.gather(*(one(x) for x in items[i:i+CONCURRENCY*3])))
+            log.info('Estações analisadas: %d/%d',len(results),len(items))
+        await browser.close()
+    current={}; streams_total=0
+    for r in results:
+        valid=[u for u in r.get('streams',[]) if looks_stream(u)]
+        if not valid: continue
+        streams_total += len(valid); k=station_key(r['url']); prev=old.get(k,{})
+        name=r.get('name') or prev.get('name') or k.rsplit('/',1)[-1].replace('-',' ').title()
+        current[k]={'url':r['url'],'name':name,'categories':r.get('categories') or prev.get('categories') or ['Outros'],'stream':valid[0],'logo':prev.get('logo',''),'failures':0,'last_ok':int(time.time())}
+    for k,p in old.items():
+        if k in current: continue
+        failures=int(p.get('failures',0))+1
+        if failures<FAILS_TO_REMOVE and p.get('stream'):
+            q=dict(p); q['failures']=failures; current[k]=q; log.warning('Preservando temporariamente: %s (falha %d/%d)',p.get('name',k),failures,FAILS_TO_REMOVE)
+        else: log.info('Removendo inativo: %s',p.get('name',k))
+    if not current:
+        log.error('Nenhum canal utilizável encontrado; lista anterior preservada.'); return 2
+    save_state(current)
+    lines=['#EXTM3U','']
+    for k,p in sorted(current.items(),key=lambda kv:(str(kv[1].get('categories',['Outros'])[0]).lower(),str(kv[1].get('name','')).lower())):
+        name=esc(p.get('name') or k.rsplit('/',1)[-1]); cats=p.get('categories') or ['Outros']; group=esc(cats[0]); logo=esc(p.get('logo','')); stream=p.get('stream','')
+        attrs=f'tvg-name="{name}" group-title="{group}"'
+        if logo: attrs += f' tvg-logo="{logo}"'
+        lines += [f'#EXTINF:-1 {attrs},{name}',stream,'']
+    M3U.write_text('\n'.join(lines),encoding='utf-8')
+    log.info('Streams utilizáveis: %d | Canais na M3U: %d',streams_total,len(current)); log.info('Gerado: %s',M3U)
     return 0
 
-if __name__ == "__main__": sys.exit(main())
+if __name__=='__main__': raise SystemExit(asyncio.run(main()))
