@@ -1,1 +1,2366 @@
-{}
+{
+  "stream:00ea0e08197cc555e6382f35d570a1179b266fd3": {
+    "fail_count": 0,
+    "genres": [
+      "Esportes"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/7de7be06-d41f-40c7-b84a-57c8479db060.png",
+    "name": "Drive Channel TV",
+    "streams": [
+      "https://drivechannel.com.br/aovivo/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:01da9c6c5ddaf060cd6f1f66cc23853fe7c5d1ab": {
+    "fail_count": 0,
+    "genres": [
+      "WebTV"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/f1b8f7ad-8b64-4757-afaa-ac6503970445.webp",
+    "name": "TES - São Luís",
+    "streams": [
+      "https://stmv3.voxtvhd.com.br/tves14edson/tves14edson/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:03fba0825a75c4a0f47c0631bcac21944ec13e88": {
+    "fail_count": 0,
+    "genres": [
+      "Esportes"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/b2c8b59f-e61f-4ac8-a23c-bf095ea4c341.png",
+    "name": "CazéTV",
+    "streams": [
+      "https://amg01391-amg01391c10-tcl-br-9630.playouts.now.amagi.tv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:06fb72ee892d1d7d0bc75e7e2e5b104f04da3e6e": {
+    "fail_count": 0,
+    "genres": [
+      "Religioso",
+      "Católico"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/f309950a-5dc8-4a24-9cc4-1148fc03bd57.png",
+    "name": "Rádio Evangelizar - 99,5 FM",
+    "streams": [
+      "https://8239.brasilstream.com.br/stream?origem=site"
+    ],
+    "url": ""
+  },
+  "stream:091d25cd866ef1704bc0476d63f947e3c4e53a5c": {
+    "fail_count": 0,
+    "genres": [
+      "Documentários"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/ae516bf7-a4ee-4d4b-a1c2-11bac9e35f4a.webp",
+    "name": "TV Protagonistas",
+    "streams": [
+      "https://stmv2.samcast.com.br/davi7311/davi7311/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:0955c3344b0d85d716057d70ef6dbaf2b5e8bddb": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/e73b0f39-f3db-4f7c-bb82-8ff221eada90.webp",
+    "name": "TV Cidade 10",
+    "streams": [
+      "https://video10.logicahost.com.br/tvcidade10/tvcidade10/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:099b17d4113ab4749e2a49cf7990e9f49c88900b": {
+    "fail_count": 0,
+    "genres": [
+      "Música"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/0cb337d8-e0b8-4201-873e-267bd5009ec9.png",
+    "name": "Lamore Rock Show",
+    "streams": [
+      "https://a.cdni.live/rodrigo2364/rodrigo2364/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:0aa4bc04de0ce9680213993f1096459c1ef62850": {
+    "fail_count": 0,
+    "genres": [
+      "Filmes",
+      "Desenhos",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/3e4c6492-9643-47d7-b03a-176e18c40e72.png",
+    "name": "Já Viu TV",
+    "streams": [
+      "https://stmv5.samcast.com.br/val4355/val4355/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:0b9ff3392639dee259752afd2cbe42577cc93eb5": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Filmes"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/64424b30-94b9-4213-95bb-61d31e907f2d.webp",
+    "name": "TV Max 90",
+    "streams": [
+      "https://cdn.live.br1.jmvstream.com/webtv/AVJ-15538/playlist/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:0e06b7641c25a040d54827549287bc7f4ce510ea": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Regional"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/fd1b7b4d-9e6a-4b13-9d0c-4da4ff56d945.webp",
+    "name": "Rede Metrópole",
+    "streams": [
+      "https://isaocorp.cloudecast.com/metropole/index.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:126af807d1061f46fae790fa901dcfabca45ed21": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades",
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/abef9f8c-77f0-428f-918e-87e40edb1520.png",
+    "name": "TV Pampa",
+    "streams": [
+      "https://video04.logicahost.com.br/tvpampa/tvpampa/chunklist_w100232246.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:1476fcdaaa4d048db04d0bbce335b2121b81b71a": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/87fed7f4-ffb5-4927-a206-c7e6386fa984.webp",
+    "name": "VTR Channel",
+    "streams": [
+      "https://sistemavrt2023.vrtchannel.tv.br:3626/hybrid/play.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:1574e847ce0fc4b71f029a68d2c89c9535bc0ac0": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Regional"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/820cc799-ef1e-4b66-8284-a491118f203f.png",
+    "name": "TV Litoral RN",
+    "streams": [
+      "https://5ad482a77183d.streamlock.net/tvnordesteegmail.com/tvnordesteegmail.com/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:16012f1d441f96013626d96ffc53db7efabf7484": {
+    "fail_count": 0,
+    "genres": [
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/192e8b2f-6257-4af6-b37e-d72da2083ebc.webp",
+    "name": "Rádio e TV Livre Brasil",
+    "streams": [
+      "https://video03.logicahost.com.br/tvlivrebrasil/tvlivrebrasil/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:162d3063f1d8ddcc040675a9041bd0561aad1ddc": {
+    "fail_count": 0,
+    "genres": [
+      "Religioso",
+      "Desenhos",
+      "WebTV"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/02decbf6-d666-409e-87c2-725ed7f447c5.png",
+    "name": "Ministério Infantil TV",
+    "streams": [
+      "https://stmv4.voxtvhd.com.br/1990/1990/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:16f17c620f1b9cfb413a36c6c378b55ee4da1490": {
+    "fail_count": 0,
+    "genres": [
+      "Música"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1ea80c2a-8eac-4fa5-8058-c53bbe47898f.png",
+    "name": "Interativa TV",
+    "streams": [
+      "https://video11.logicahost.com.br/interativafm01/interativafm01/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:170124acad9f32216a57e7792a7fd2a70c63f065": {
+    "fail_count": 0,
+    "genres": [
+      "Comunitária"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/864f1ee3-d0a4-4b16-8b70-062b0d0ff8f6.webp",
+    "name": "Farol TV",
+    "streams": [
+      "https://video05.logicahost.com.br/tvpontadoseixas/tvpontadoseixas/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:18081bf0225f06524f60c2d0ada3d6fc6b1d1a4d": {
+    "fail_count": 0,
+    "genres": [
+      "LifeStyle"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a98d8b8f-35db-4515-b7e6-15853c912644.webp",
+    "name": "PLOUS TV",
+    "streams": [
+      "https://vcp.myplaytv.com/glowtv/glowtv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:183657004b6013b1725d1b7062702e60283aa14b": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades",
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/985379fd-9dc4-4945-852f-c0bc6c09793a.png",
+    "name": "TV Tropical",
+    "streams": [
+      "https://video08.logicahost.com.br/portaldatropical02/portaldatropical02/chunklist_w233182014.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:18affd83062cada447916690580636d6e65365d2": {
+    "fail_count": 0,
+    "genres": [
+      "Educativa"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1752173824932-836px-Cultura_logo_2010.webp",
+    "name": "TV Cultura",
+    "streams": [
+      "https://player-tvcultura.stream.uol.com.br/live/tvcultura_lsd.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:2261253b5c13af73e085032e7049564a3d083be3": {
+    "fail_count": 0,
+    "genres": [
+      "Games",
+      "Música"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/fc43a490-6cf7-4385-bb99-cac59d3b2f8b.png",
+    "name": "YEEAAH",
+    "streams": [
+      "https://srv5.zcast.com.br/yeeaah/yeeaah/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:23f03c28a47455bc599d59f4b8da3d79fb0db2fe": {
+    "fail_count": 0,
+    "genres": [
+      "Comunitária"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/122ebea7-6916-440c-9d65-ec560962d30d.webp",
+    "name": "TV Banqueta",
+    "streams": [
+      "https://video10.logicahost.com.br/tvbanqueta/tvbanqueta/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:28f4b026f6f1ae444e5032bd7dbc31066e83f8f8": {
+    "fail_count": 0,
+    "genres": [
+      "Animes",
+      "Desenhos",
+      "Filmes"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/15237629-508f-42fc-90f8-f0e07287ef4e.png",
+    "name": "TvNilcera",
+    "streams": [
+      "https://lbgo.bozztv.com/ssh101/ssh101/tvnilcera/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:29527ae6327c6fafa9ec0b3b1848c5a441536737": {
+    "fail_count": 0,
+    "genres": [
+      "Música"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/e7e162fd-48c5-4af2-a8b3-0ebc53e90861.png",
+    "name": "JKFM+",
+    "streams": [
+      "https://stmv2.srvif.com/jkfm5/jkfm5/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:29aa28eb8c14001ced434588377c7f74a24b0274": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a5a24c36-afd0-4f16-a0c6-3fb57062cd59.png",
+    "name": "Band",
+    "streams": [
+      "https://hqf6tcxuhk.singularcdn.net.br/live/019a797e-eeb8-7eda-9518-132403ccb160/s1/playlist_nova-a.m3u8?sjwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImEyODE0ODE2LTI1N2EtNDg1Ny1iNDY1LTM3MmRlMzA2MWI1YiIsImlzcyI6IlNwYWxsYSIsImlhdCI6MTc5MDI1OTYzMiwibmJmIjoxNzkwMjU5NjMyLCJleHAiOjE3OTI4NTE2MzIsInVyaV9zdWIiOiIvMDE5YTc5N2UtZWViOC03ZWRhLTk1MTgtMTMyNDAzY2NiMTYwLyIsInVpZCI6ImEyODE0ODE2LTI1N2EtNDg1Ny1iNDY1LTM3MmRlMzA2MWI1YiIsImJleSI6ZmFsc2UsImlpcCI6ZmFsc2UsImRwciI6ZmFsc2V9.l9LxZ4Qh-pMo9mFXc3ACTqmjeUgVKm683-gzj0Ius1M&uid=a2814816-257a-4857-b465-372de3061b5b&magica=sim"
+    ],
+    "url": ""
+  },
+  "stream:2e0c620eaab84589847734bcf3c71942ac0a2c06": {
+    "fail_count": 0,
+    "genres": [
+      "Notícias",
+      "Variedades",
+      "Religioso"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/dc97a2f2-3a65-46fb-9330-2a88a6c97793.png",
+    "name": "TV Ponto de Encontro",
+    "streams": [
+      "https://stmv4.voxtvhd.com.br/tvpontodeencontro/tvpontodeencontro/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:2fb1e637d73a2bc48a35d7e73a8d4098ec5abc8c": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/dbf0c632-c996-4dca-afd2-1cc3491d8b7b.png",
+    "name": "NGT",
+    "streams": [
+      "https://isaocorp.cloudecast.com/ngt/index.fmp4.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:3197e4631670f7ffb505c55cf098b3c61da2a658": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Música"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/69f45c3a-c243-44b1-87de-352ec5f8674f.png",
+    "name": "+MaisUm",
+    "streams": [
+      "https://stream.ichibansys.com:3230/hybrid/play.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:33695bbc96e5177c00ad5bafbaa8d231a91255d1": {
+    "fail_count": 0,
+    "genres": [
+      "Jovem",
+      "WebTV",
+      "Games"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a3cd1659-7cc4-4dc6-ad3c-53cb5bc9fe68.png",
+    "name": "Canal START",
+    "streams": [
+      "https://srv5.zcast.com.br/canalstart/canalstart/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:37d6ce425b40358559987365a8feac189b23a644": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Regional",
+      "Vendas"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/2f6c1b27-b2e3-40f9-96ee-db7757c56047.webp",
+    "name": "TV TUDO",
+    "streams": [
+      "https://tv02.zas.media:1936/tvtudo/tvtudo/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:38a583e880fb3acfb43a1a03b7e19c3d8ae844db": {
+    "fail_count": 0,
+    "genres": [
+      "Comunitária",
+      "Variedades",
+      "Regional"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/3ead5e1c-5b7c-44bc-a004-6a1e733d7f07.webp",
+    "name": "TVCOM",
+    "streams": [
+      "https://video01.logicahost.com.br/tvcomsantos/tvcomsantos/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:39080e42b6848e13557ea3a08492938184ee36c5": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Regional"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/10f9aac6-dfcd-4181-9d4b-619cab6ee374.webp",
+    "name": "RedeTV Paraná",
+    "streams": [
+      "https://tv01.zas.media:1936/redetvparana/redetvparana/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:3a45e5602ddf1137d8be1b86c84f303c0512f37e": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "WebTV"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/f8530942-5e0b-419d-8c4d-b8669fc22812.png",
+    "name": "TV A Folha",
+    "streams": [
+      "https://video01.logicahost.com.br/tvafolha/tvafolha/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:3ba733538e1cd64832332ef92b993a5a591006d1": {
+    "fail_count": 0,
+    "genres": [
+      "Flashback",
+      "Hits"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1753587068932-hits-logo-2025-.webp",
+    "name": "Rádio Hits - 106,9 FM",
+    "streams": [
+      "https://wz7.servidoresbrasil.com:9984/stream?xttv.com.br"
+    ],
+    "url": ""
+  },
+  "stream:3c068b5bb54c1a5902b89a550a47948ffe5e310c": {
+    "fail_count": 0,
+    "genres": [
+      "Notícias",
+      "Regional"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/9fa249d8-67c2-4954-b56c-b3d50ea05223.webp",
+    "name": "TV Cultural HD",
+    "streams": [
+      "https://video10.logicahost.com.br/culturaltvhd/culturaltvhd/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:3c7a56e0e6204a956a4f61b64ab9d61ef1f796ea": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/3a7b9d68-038a-4ced-9d8e-8edb1b3a71c1.webp",
+    "name": "Rede Vivax TV",
+    "streams": [
+      "https://stmv2.samcast.com.br/marcus8647/marcus8647/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:3ca5f1138ff8a387c47dfbe0af327e6d8d71d1d4": {
+    "fail_count": 0,
+    "genres": [
+      "Pop Rock",
+      "Pop",
+      "Hits"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/ca88fb3f-dedf-4571-a1fe-886763d52de3.png",
+    "name": "Interativa - 94,9 FM",
+    "streams": [
+      "https://radio.saopaulo01.com.br:10766/stream?xttv.com.br"
+    ],
+    "url": ""
+  },
+  "stream:3f2e65cd19c79f738a72e1445b57c205ee80ec75": {
+    "fail_count": 0,
+    "genres": [
+      "Internacional",
+      "Flashback"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/35ecc8f1-8f2c-42e3-8b13-1aa34983c8bd.png",
+    "name": "Antena 1 - 94,7 FM",
+    "streams": [
+      "https://antenaone.crossradio.com.br/stream/1?1751387427428"
+    ],
+    "url": ""
+  },
+  "stream:3f862d2dcf2802d8227d0fb11e113d6de99cd51f": {
+    "fail_count": 0,
+    "genres": [
+      "Jovem"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/23a4e010-ecc5-45cf-85b5-387077d710f2.png",
+    "name": "Rádio AMC+",
+    "streams": [
+      "https://radioamc.com.br/stream/amcplus"
+    ],
+    "url": ""
+  },
+  "stream:3ffde03deb6816d6e39b11231b8aed0daf08b324": {
+    "fail_count": 0,
+    "genres": [
+      "Música"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/07a785c9-f4d8-490e-bae3-a1ed9995d49f.png",
+    "name": "Top TV",
+    "streams": [
+      "https://isaocorp.cloudecast.com/toptv/index.fmp4.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:408b6d92b91b994db178751c217f786a3d1a2eca": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades",
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/715fd323-68eb-44b3-9f33-848ae857d2fe.png",
+    "name": "TV Interior Paulista",
+    "streams": [
+      "https://video10.logicahost.com.br/interiorpaulista/interiorpaulista/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:40c3ff0a40e141d6ff47c75af2e15c80d2ade15d": {
+    "fail_count": 0,
+    "genres": [
+      "Religioso"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/28aa68c2-3ad7-4c95-ab24-7f0f15bfac21.png",
+    "name": "TV Liberdade Betel",
+    "streams": [
+      "https://stmv7.voxtvhd.com.br/liberdadebetel/liberdadebetel/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:41b8d8de9bc87454721e3d1bf077d9d852c1555a": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Filmes"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/7a2cbc87-c46b-4a49-b8f2-7f2a5141fead.webp",
+    "name": "TV MON HD",
+    "streams": [
+      "https://video10.logicahost.com.br/tvmon/tvmon/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:436638d1961bae4048c8f00d5d6a710d5d704743": {
+    "fail_count": 0,
+    "genres": [
+      "Educativa",
+      "Religioso",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/b746b0c7-9a7c-4beb-855c-dadacceb189d.png",
+    "name": "FONTE TV",
+    "streams": [
+      "https://59fb88a1b1108.streamlock.net/fonte/_definst_/fontetv/chunklist_w1224511652.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:44fa8898e480dc226e4ba21888db2ec93a1fb8d5": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/5287b77c-6410-4934-aab6-6d62ac792b9d.png",
+    "name": "TV Metrópole",
+    "streams": [
+      "https://cdn-fundacao-2110.ciclano.io:1443/fundacao-2110/fundacao-2110/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:4579c1e3e9b89bb9450e12edfc008c1a37362c5d": {
+    "fail_count": 0,
+    "genres": [
+      "Música"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/0a7f1331-7603-4ff5-923a-ad85a794607a.webp",
+    "name": "Now 90s & 00s",
+    "streams": [
+      "https://amg01076-amg01076c19-rakuten-gb-8653.playouts.now.amagi.tv/ts-eu-w1-n2/playlist/amg01076-lightning-now90s00s-rakutengb/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:458bcfde079fec706a1a16e48efd2c254eabe49a": {
+    "fail_count": 0,
+    "genres": [
+      "Notícias",
+      "Jornalismo"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/e76d9182-3866-4217-a446-893f9598a0f2.webp",
+    "name": "Rádio Manchete - 79,9 FM",
+    "streams": [
+      "https://8410.brasilstream.com.br/stream?origem=xttv.com.br"
+    ],
+    "url": ""
+  },
+  "stream:45f996b51eda1f276247c541d3e757edbed8a84a": {
+    "fail_count": 0,
+    "genres": [
+      "Vendas"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/939fa3ee-6341-40db-a5a8-2f26864607f4.webp",
+    "name": "TV Gazin",
+    "streams": [
+      "https://video09.logicahost.com.br/tvgazin/tvgazin/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:4822c26b9fa18b0aff2a460b7d3cd0d1fd8b890a": {
+    "fail_count": 0,
+    "genres": [
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/cb1366a7-f552-42af-9d9f-28f1343ba402.webp",
+    "name": "Tramandaí TV",
+    "streams": [
+      "https://video08.logicahost.com.br/tvpraia/tvpraia/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:48ea885e2ed297291cf556d351bac84c34c730c7": {
+    "fail_count": 0,
+    "genres": [
+      "Filmes"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/8d46766d-598d-4829-b894-672ff55a265d.png",
+    "name": "TV Channel",
+    "streams": [
+      "https://tvchannel.tvr.ovh/video28392/video28392/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:4a05acd9ec6dfee48cf60b897911ee5e71a55a88": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Filmes",
+      "Séries"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/c23657e3-6f7f-42bd-9430-332ed07d2353.png",
+    "name": "SBC",
+    "streams": [
+      "https://video01.brascast.com/rede1250/rede1250/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:4a981b848a8d55abd2684c1cda309c61fc19dc92": {
+    "fail_count": 0,
+    "genres": [
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/b0ce9384-0599-4a9a-a39f-520c9569a7cc.png",
+    "name": "DW News",
+    "streams": [
+      "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/master.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:4e1257f8f5518a3a52974c75d71d2529277cfba1": {
+    "fail_count": 0,
+    "genres": [
+      "Esportes",
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1755264906950-verdinha.webp",
+    "name": "Verdinha - 92,5 FM",
+    "streams": [
+      "https://5a1c76baf08c0.streamlock.net/z18-live/stream/chunklist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:502b91488e6ca18e24e8d8d18164b2f932f26f09": {
+    "fail_count": 0,
+    "genres": [
+      "Religioso"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/339e3f73-0d75-49ac-bc5b-1ed84af9bf6e.png",
+    "name": "TV Casa do Pai",
+    "streams": [
+      "https://stmv6.voxtvhd.com.br/j1casa/j1casa/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:50f2e85ca240eabdd65a7f82da6043a78b4a88fa": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/f04476e9-e42e-4855-a245-8e04bb56fbeb.png",
+    "name": "Rede QDM",
+    "streams": [
+      "https://stmv1.transmissaodigital.com/redeqdm/redeqdm/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:51391f26b97066ee0ac485a414a5089cd6bb659d": {
+    "fail_count": 0,
+    "genres": [
+      "Filmes",
+      "Variedades",
+      "Desenhos"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/c23df1c1-b376-44b6-9489-78af42b41f74.webp",
+    "name": "TV LatinaSat",
+    "streams": [
+      "https://www.latinasat.com.br/hls/live/stream/index.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:558bd47d7fa747cb8275a57d79c5eb99fd352bee": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/b4f8ba32-b845-4331-b1fc-096397afe988.webp",
+    "name": "BSTV",
+    "streams": [
+      "https://br5093.streamingdevideo.com.br/bstv/bstv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:57cfd770da94cee22266fa605338579681afc6cf": {
+    "fail_count": 0,
+    "genres": [
+      "Religioso"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/bb2a0b36-8925-4c3d-b4cd-bed8351de755.png",
+    "name": "TV Sonora",
+    "streams": [
+      "https://video01.brascast.com/xavier4499/xavier4499/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:57edad5e92bf8f2761c87361f37936f93b17edb1": {
+    "fail_count": 0,
+    "genres": [
+      "Popular"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/6452bb1f-4442-4740-8865-01dd20eb4579.png",
+    "name": "Radio Deolam FM",
+    "streams": [
+      "https://stm1.painelaudiocast.com.br:7176/stream?1773261551855"
+    ],
+    "url": ""
+  },
+  "stream:5ae7ae6587c7719373d0d12536076d14eb95bb00": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Regional"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/c9720bbe-3dba-4651-9c94-9055100ec7e9.webp",
+    "name": "Alpha Channel",
+    "streams": [
+      "https://isaocorp.cloudecast.com/alphachannel/index.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:5c63202cc3e103c9dd024927c8893313f38db780": {
+    "fail_count": 0,
+    "genres": [
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/cbe55c36-3bbb-4c15-936e-7b1c88d1188a.png",
+    "name": "CNN Brasil",
+    "streams": [
+      "https://d25usgadhphvwi.cloudfront.net/hls/stv-plus1280x720/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:620b2554177e79ca3aca85e7bcef849943f21b6a": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Regional",
+      "Vendas"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/8a6b3303-969f-4141-be6f-e16370bca1a9.webp",
+    "name": "TV CAR",
+    "streams": [
+      "https://video11.logicahost.com.br/tvcar/tvcar/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:628e46d1240e80025787c8eddd6cdb1652943d98": {
+    "fail_count": 0,
+    "genres": [
+      "Governamental"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/e3e0ac86-8f91-411c-995a-ccf35a5a5fd9.webp",
+    "name": "TV Câmara",
+    "streams": [
+      "https://stream3.camara.gov.br/tv1/manifest.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:644ecced2503c970d915cfed9ac9133d25b7b7f2": {
+    "fail_count": 0,
+    "genres": [
+      "Desenhos",
+      "Notícias",
+      "Regional"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/cf92565e-aa3c-47cc-979b-6196160ae318.png",
+    "name": "TV Jovem Total",
+    "streams": [
+      "https://stmv1.liveplushd.com.br/jovemtotaltv/jovemtotaltv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:65d3b688f162de0ca5dd3abe02c7c2fcb2c44f18": {
+    "fail_count": 0,
+    "genres": [
+      "Regional"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1aa1cfbe-3b25-4a1d-9f8d-8fe0dc785178.png",
+    "name": "TVCI",
+    "streams": [
+      "https://cpbr.appflux.com.br:2000/hls/tvcilive/tvcilive.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:6676ea3fdbaf1ec717e1345be30f282826be3fc3": {
+    "fail_count": 0,
+    "genres": [
+      "WebTV",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/6546166a-f9b6-4b58-bb4f-af01675667b7.png",
+    "name": "CBTV",
+    "streams": [
+      "https://stmv2.samcast.com.br/carla7379/carla7379/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:67e1e947839b028c4d705506e13ce84acac4c68d": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/5eecbc00-6103-4063-beb1-42163f35860e.png",
+    "name": "NBX TV",
+    "streams": [
+      "https://stmv7.voxtvhd.com.br/nbxtv/nbxtv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:6c5af2740e71d9ae2319f85c3a5fa9c600c14bca": {
+    "fail_count": 0,
+    "genres": [
+      "Notícias",
+      "Regional",
+      "Religioso"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/14bdf6aa-ee2a-4c75-bdf6-e052e7c308ca.png",
+    "name": "RFTV",
+    "streams": [
+      "https://tv03.zas.media:1936/rftv/rftv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:6d1ca31043cedf3e15e25401d12e892abaac8c7f": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Regional"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/8c92ef33-87f3-421b-9001-b54fa6a9d1a9.webp",
+    "name": "TV Aliança",
+    "streams": [
+      "https://video08.logicahost.com.br/alianca/alianca/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:6d52102d03b302ced220744f92955dc899dfcd2c": {
+    "fail_count": 0,
+    "genres": [
+      "WebTV",
+      "Regional"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/c67f4bbf-2271-4dd1-af4d-8d4557a46f5e.png",
+    "name": "TV Sol",
+    "streams": [
+      "https://video05.logicahost.com.br/tvsol/tvsol/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:6defadbfa8a02203eb17477193d97eda3089956e": {
+    "fail_count": 0,
+    "genres": [
+      "Filmes",
+      "Séries"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/e7cd1ae5-13eb-4008-b2e1-e3c116e47999.webp",
+    "name": "Cine Catástrofe",
+    "streams": [
+      "https://video05.logicahost.com.br/cinecatastrofe/cinecatastrofe/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:6f17481d8e1adbcfb2425576d7b49a60ff55f485": {
+    "fail_count": 0,
+    "genres": [
+      "WebTV"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/9de779d8-14c7-4419-8791-8a7ad4da690d.png",
+    "name": "Geekdot",
+    "streams": [
+      "https://stream.ichibansys.com:3764/hybrid/play.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:70554420d64dc68dee777558eeb91ae77d71cc86": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/29690c9d-115a-4056-9a5a-34cd3c673cc0.png",
+    "name": "ISTV",
+    "streams": [
+      "https://video10.logicahost.com.br/redeistv/redeistv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:71eb02a43ab684cc758ba6274c0002a8e568b150": {
+    "fail_count": 0,
+    "genres": [
+      "Regional"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/20822af2-92a9-4109-a0ef-1e4ec05f16da.webp",
+    "name": "TV Praia",
+    "streams": [
+      "https://video08.logicahost.com.br/tvpraia/tvpraia/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:7225085d4e61f048f783e96f15eb58b241d2f70a": {
+    "fail_count": 0,
+    "genres": [
+      "Pop",
+      "Hits",
+      "Jovem"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/4da53f4b-ac0f-42a9-9803-effe72c66466.png",
+    "name": "Jovem Pan BH - 99,1 FM",
+    "streams": [
+      "https://8062.brasilstream.com.br//stream?origem=xttv.com.br"
+    ],
+    "url": ""
+  },
+  "stream:72dfd85c163e71ed961b8c26acd54e2a53114c81": {
+    "fail_count": 0,
+    "genres": [
+      "Documentários"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/3d7522e1-881a-4777-9886-bb77cc49a8f5.webp",
+    "name": "TV História",
+    "streams": [
+      "https://video10.logicahost.com.br/tvhistoria/tvhistoria/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:739cc62172bda38bf419e8e74b9b41bd0c2387cc": {
+    "fail_count": 0,
+    "genres": [
+      "Regional"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/db1f994d-d1ab-40f7-9425-a797c58fabae.webp",
+    "name": "TV Itaipuaçu",
+    "streams": [
+      "https://stmv5.samcast.com.br/jorgerobertorodriguescardoso1832/jorgerobertorodriguescardoso1832/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:7476c815c91d75b6e41addeb19aedffa7f690d65": {
+    "fail_count": 0,
+    "genres": [
+      "Câmera"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/445793b6-ef92-4aea-a694-cd14d2f7cbc9.webp",
+    "name": "Sphere",
+    "streams": [
+      "https://cdn-us-east-prod-ingest-infra-dacast-com.akamaized.net/ff4131d1-1018-a1ed-26c3-de61e7ba2312/index.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:75136f82c028556a7e85d30086d928d1a2f25328": {
+    "fail_count": 0,
+    "genres": [
+      "Notícias",
+      "Documentários"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/4d6b3e53-7dba-45c8-9131-20fcae546bed.png",
+    "name": "Rede Ultra TV",
+    "streams": [
+      "https://stmv8.samcast.com.br/jcbrasil7363/jcbrasil7363/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:799d296e506df26829cde268bcdba0b938ac744c": {
+    "fail_count": 0,
+    "genres": [
+      "Futebol",
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/3c1adfc5-0456-4ca0-9a19-3fb858831d0f.png",
+    "name": "Rádio Caxias - 93,5 FM",
+    "streams": [
+      "https://painel.sintonizar.tv.br/stream/rdcaxias?xttv.com.br"
+    ],
+    "url": ""
+  },
+  "stream:7c7ffa7671b39f5e9866fe5793687fde33a1f912": {
+    "fail_count": 0,
+    "genres": [
+      "WebTV"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/8d8bb6df-8456-4bc8-a902-2c665080c070.png",
+    "name": "TV Sonata",
+    "streams": [
+      "https://video04.logicahost.com.br/isonata/isonata/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:7cf69e1662130ab5bc5f0f4c17fa9ace5b87c203": {
+    "fail_count": 0,
+    "genres": [
+      "Eclética",
+      "Forró",
+      "Sertanejo"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/4c6612c2-1c22-44d7-a350-4f63e350a54e.png",
+    "name": "Rádio FM 93 - 93 FM",
+    "streams": [
+      "https://jvcs2dtro0.zoeweb.tv/fm93/stream/chunklist_w972447593.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:7e1b45695fceaaeeebf9a80b91f86a165aea0e0d": {
+    "fail_count": 0,
+    "genres": [
+      "Música"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a22e8d35-e942-4f35-bbb7-f563bb114b4b.png",
+    "name": "Vevo POP",
+    "streams": [
+      "https://d2n3779oy6efpi.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-5rxuagztow0k3/playlist.m3u8?ads.device_did=%7BPSID%7D&ads.device_dnt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.consent=%7BTC_STRING%7D&ads.ssai_vendor=SSSLIVE&ads.service_id=GBBC19000017V"
+    ],
+    "url": ""
+  },
+  "stream:7f41d38633e3593862095671ca262f493c5b6ec3": {
+    "fail_count": 0,
+    "genres": [
+      "Esportes"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/f19b1db8-220e-4837-b6b1-31029b932b09.webp",
+    "name": "N Sports",
+    "streams": [
+      "https://ogc-nsprt-tcl-roku-syndication.otteravision.com/ogc/nsprt/nsprt_720p.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:803c331fdc6e6e4a577810a16c8f15e22bb5abdc": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/f082d1bb-c61b-4a35-80ad-da747b331d0a.png",
+    "name": "Astral TV",
+    "streams": [
+      "https://isaocorp.cloudecast.com/astraltv/index.fmp4.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:80ec8efd0067455d226ccea652071cd509f1d307": {
+    "fail_count": 0,
+    "genres": [
+      "Música"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/00bb22e1-b75f-437e-bae0-b25d754cf871.png",
+    "name": "Now 80s",
+    "streams": [
+      "https://samsunguk-lightning-now80s-samsunguk-n908q.amagi.tv/playlist/samsunguk-lightning-now80s-samsunguk/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:8247b91bec29ec72f0caabc9e8b8239263dfdfcb": {
+    "fail_count": 0,
+    "genres": [
+      "Comunitária"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/80342009-6ea0-48dd-844a-47f6a1b93ed5.webp",
+    "name": "TV COM DF",
+    "streams": [
+      "https://5b7f3c45ab7c2.streamlock.net/8008/8008/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:85e2588025473345e1bdad1c9c679de3bb8a2dfc": {
+    "fail_count": 0,
+    "genres": [
+      "Filmes",
+      "WebTV"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/d8c6cdf4-6508-43f7-b725-378debce511c.png",
+    "name": "Caravana Play",
+    "streams": [
+      "https://stmv2.voxtvhd.com.br/keynni6990/keynni6990/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:88af03c2ac763c1c66e5db7f51c8b41dee592266": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "WebTV"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/f1e749be-e44b-4dd4-9145-5c5147f8eeb7.png",
+    "name": "TV Mais Brasil",
+    "streams": [
+      "https://stmv8.samcast.com.br/tvmaisbrasil/tvmaisbrasil/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:89111927b522306533ea92d974573f85c397737e": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Comunitária"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/6d7e2236-edc2-4508-976a-96cfde665c53.png",
+    "name": "TV Metropolitana",
+    "streams": [
+      "https://stmv5.samcast.com.br/claudio8701/claudio8701/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:8ec1e08307093f55aa9cd30295452ec3d898aa5e": {
+    "fail_count": 0,
+    "genres": [
+      "Novelas",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1753452661072-latest.webp",
+    "name": "TVI Portugal",
+    "streams": [
+      "https://raw.githubusercontent.com/LITUATUI/M3UPT/main/M3U/TVI.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:9192956fb79cc8a52c85d4c4004d0e482bb68038": {
+    "fail_count": 0,
+    "genres": [
+      "Jornalismo"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/697cf636-6f90-4ffb-9872-8809a3d91e98.png",
+    "name": "Paraíso FM - 101,1 FM",
+    "streams": [
+      "https://stm28.xcast.com.br:11582/stream?xttv.com.br"
+    ],
+    "url": ""
+  },
+  "stream:92a0c09e672e9d0842dad5646529fcc0407a5db9": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Filmes"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/cbee899a-25dc-42e3-b50c-60fc86687e5a.webp",
+    "name": "Adesso TV",
+    "streams": [
+      "https://cdn.live.br1.jmvstream.com/w/LVW-9715/LVW9715_12B26T62tm/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:953b1d4a92cf8d0c3473885c6e2d72342797b75c": {
+    "fail_count": 0,
+    "genres": [
+      "Novelas",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/177896b2-f6e2-466a-b6bd-b0f699aa492c.png",
+    "name": "SBT",
+    "streams": [
+      "https://aovivo.maissbt.com/channel_720.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:96331ab3d19ee991464733968a2e48ff30a4124c": {
+    "fail_count": 0,
+    "genres": [
+      "Eclética",
+      "Nacional",
+      "Hits"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/d89961dc-4b1e-47fe-807b-d1f9cdb45608.png",
+    "name": "Gazeta FM - 88,1 FM",
+    "streams": [
+      "https://gazetafmsite.crossradio.com.br:19878/stream/1"
+    ],
+    "url": ""
+  },
+  "stream:983bd66e5058890d785ff9b6ff3ccc414e3e36d2": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Vendas"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/b03e8036-8d0b-40b5-a3f5-e3662b8e5a7d.webp",
+    "name": "TV Notícias Agrículas",
+    "streams": [
+      "https://video09.logicahost.com.br/tvnoticiasagricolas/tvnoticiasagricolas/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:99eb617cee52fe4e4439b9c4c5d0595af1ed23e2": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "WebTV"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/bdf51598-964c-43a2-97dd-f40b0188df81.png",
+    "name": "TV Zoom",
+    "streams": [
+      "https://cdn.live.br1.jmvstream.com/w/LVW-9730/LVW9730_LmUwslM8jt/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:9ba1bdf42e8113acfc3566e4391cf99c58afb321": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Jovem",
+      "Games"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/7cdc0a01-dfb9-45fd-b37e-fc01ac2deb78.png",
+    "name": "Play TV",
+    "streams": [
+      "https://isaocorp.cloudecast.com/playtv/index.fmp4.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:9c227ea5a77ae45e633ddc2f25551c9ad72c2686": {
+    "fail_count": 0,
+    "genres": [
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/0604d7a9-be84-47cd-8e61-a2beac0ff950.webp",
+    "name": "BDC TV",
+    "streams": [
+      "https://video01.brascast.com/bdctv/bdctv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:9cf152f8a848f006c54d5afe83370a8f9bd65a02": {
+    "fail_count": 0,
+    "genres": [
+      "Jornalismo",
+      "Esportes"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/9cd3362e-355b-415d-abbc-63fd8c475cc0.png",
+    "name": "Gaúcha - 93,7 FM",
+    "streams": [
+      "https://liverdgaupoa.rbsdirect.com.br/primary/gaucha_rbs.sdp/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:9d5cf38483b1e172987342ed7e83a40bf3c3f9d4": {
+    "fail_count": 0,
+    "genres": [
+      "WebTV",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/62146d8b-d90a-4b82-bd7b-88b6cd85f4ac.png",
+    "name": "Lucas TV",
+    "streams": [
+      "https://stmv1.srvif.com/lucastv/lucastv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:9e85d7aa27cdf65ebdb7abd7b634326b3c7c5f93": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Regional",
+      "Desenhos"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/35cdb5ee-62f2-45aa-a082-c06e295c4b21.webp",
+    "name": "TV Do Povo Erechim",
+    "streams": [
+      "https://stmv1.voxtvhd.com.br/tvdopovo/tvdopovo/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:a163fb35f7d105d5c1933d7c7479efc26d773e93": {
+    "fail_count": 0,
+    "genres": [
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/66b31439-4b7f-46c5-8858-1a950df49caf.png",
+    "name": "SBT News",
+    "streams": [
+      "https://amg00527-amg00527c5-amgplt0026.playout.now3.amagi.tv/ts-us-w2-n1/playlist/amg00527-amg00527c5-amgplt0026/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:a57a1d8bad147e83489c2ffad2cd2eab9ec163eb": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/c410d452-a093-4f17-822c-2567d102f395.webp",
+    "name": "Rede Cidade",
+    "streams": [
+      "https://stmv2.srvif.com/famasi/famasi/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:a5d99228b71255459098235f4fe127e80e34c295": {
+    "fail_count": 0,
+    "genres": [
+      "Novelas",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/473306d7-86b2-4cea-acde-6c5cdd4070e3.png",
+    "name": "Las Estrellas",
+    "streams": [
+      "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:a698c192162c7bb63fe73a17ef38f1af9cee32d0": {
+    "fail_count": 0,
+    "genres": [
+      "Desenhos",
+      "Variedades",
+      "Filmes"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/fe9fa8b8-33ef-457f-9a21-c36287b965b0.png",
+    "name": "AG TV",
+    "streams": [
+      "https://video01.brascast.com/grezzana1839/grezzana1839/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:a90f84f30a2f3668fe4de200ad7eeb94ff89e5e7": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/2debdac7-0431-4b43-8158-aca5613dc64a.png",
+    "name": "TV Life America",
+    "streams": [
+      "https://streaming.cloudecast.com/hls/tvlifeamerica/index.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:aa19fd327f068d7724509cdc7c37a2fb3ed04b88": {
+    "fail_count": 0,
+    "genres": [
+      "Música",
+      "WebTV"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/7383729a-e3f6-441f-9994-ebae5753d906.png",
+    "name": "TV Brasil Hits",
+    "streams": [
+      "https://video04.logicahost.com.br/brasilhits/brasilhits/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:ab08774641b93e7d3605367225ef5b4694a0e60f": {
+    "fail_count": 0,
+    "genres": [
+      "Religioso"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/ace2571e-0e18-491e-bb5b-0de75cb4d647.png",
+    "name": "TV Pai Eterno",
+    "streams": [
+      "https://video09.logicahost.com.br/paieterno/paieterno/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:ac48c61841c19e528e4dcac1a1961abb2792903e": {
+    "fail_count": 0,
+    "genres": [
+      "Animes",
+      "Tokusatsu",
+      "WebTV"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/bdfbd677-bf5c-4f97-bf94-ee7b4d29ff2b.png",
+    "name": "Xtreme TV",
+    "streams": [
+      "https://video11.logicahost.com.br/xtremetv/xtremetv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:ae686063f10d451dfb55a2b45d44ac88c7599316": {
+    "fail_count": 0,
+    "genres": [
+      "Música",
+      "Notícias",
+      "Regional"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/7cc862a9-50e1-44fb-990d-3499944c989e.png",
+    "name": "O Sertão é Notícia",
+    "streams": [
+      "https://srv3.zcast.com.br/comunicacao7839/comunicacao7839/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:af8df57bf4e3d58c5bdc905108f0881863396bfb": {
+    "fail_count": 0,
+    "genres": [
+      "WebTV"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/dd52b9ee-430a-49a0-8458-2e7c7ab0bc23.png",
+    "name": "BS-TV Online",
+    "streams": [
+      "https://video05.logicahost.com.br/gbsstudio/gbsstudio/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:b12315519bf02c7bd930176d60ae89dc32f17f56": {
+    "fail_count": 0,
+    "genres": [
+      "Esportes",
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/f7cab1ce-cc60-4942-a766-5594c06cfb7c.webp",
+    "name": "Antena 1 (Portugal) - 95,7 FM",
+    "streams": [
+      "https://streaming-live.rtp.pt/liveradio/antena180a/playlist.m3u8?DVR"
+    ],
+    "url": ""
+  },
+  "stream:b1588bc7f6d5f9fb6b4311647aff88d8023fdc06": {
+    "fail_count": 0,
+    "genres": [
+      "Música"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/eb616100-9428-4d6a-a203-6b7ff7cf67e5.png",
+    "name": "UMA TV",
+    "streams": [
+      "https://umatv.nuvemplay.live/hls/stream.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:b190742c00eaaf80d8597eae5612fd46485fd961": {
+    "fail_count": 0,
+    "genres": [
+      "WebTV"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/605b5b57-d03e-4417-85a1-5a0bdfadc94a.png",
+    "name": "AWTV",
+    "streams": [
+      "https://awtv.nuvemplay.live/hls/stream.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:b198b6e9ee6015ae72a8d12f3703b9c4c956656f": {
+    "fail_count": 0,
+    "genres": [
+      "Comunitária"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1754490139239-tv%20aberta_removedbackground.webp",
+    "name": "TV Aberta SP",
+    "streams": [
+      "https://br5093.streamingdevideo.com.br/tvaberto/tvaberto/chunklist_w1286504465.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:b518cdfa06adb13edac12ec5af6489a48d712a3e": {
+    "fail_count": 0,
+    "genres": [
+      "Filmes",
+      "Séries"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/9908946d-8c9d-453e-ab57-77d84f0436fe.webp",
+    "name": "Séries Classic",
+    "streams": [
+      "https://video10.logicahost.com.br/serieclassic/serieclassic/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:b568ab0b381b6d9cc730438795178f558819dc0d": {
+    "fail_count": 0,
+    "genres": [
+      "Educativa"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/5aed954d-49ec-4713-969e-5e4672112bfe.png",
+    "name": "Rede Minas",
+    "streams": [
+      "https://8hzcavccys.zoeweb.tv/redeminas/ngrp:redeminas_all/chunklist_w376889350_b2771072.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:b56c352504022b6dcfef4da014dc0a6c400d964a": {
+    "fail_count": 0,
+    "genres": [
+      "Religioso",
+      "Regional"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/0009d1b0-da4b-4118-abdb-b4f3b283cca5.png",
+    "name": "TV Rabelo",
+    "streams": [
+      "https://s1.tvr.ovh/video10934/video10934/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:b636e0db40013c55cbfd35b9a34cfa3a485a1b1c": {
+    "fail_count": 0,
+    "genres": [
+      "Games"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/034d8fae-7ff6-4054-86d1-64d19635314c.png",
+    "name": "YEEAAH 2",
+    "streams": [
+      "https://srv5.zcast.com.br/yeeaahradio/yeeaahradio/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:b6394bdba845ef7bfdbf88aea9e0baef8abd73a8": {
+    "fail_count": 0,
+    "genres": [
+      "Notícias",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/acda0cfe-4499-4284-afe1-478076212de9.png",
+    "name": "LA 1",
+    "streams": [
+      "https://rtvelivestream.rtve.es/rtvesec/la1/la1_main_dvr.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:b6ac56913cab7b73eb523ce632ece24fc56404ed": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/692b4c51-18a3-4d8d-baa1-ca74b0106b17.webp",
+    "name": "TV Diário do Sertão",
+    "streams": [
+      "https://5ffab78b24f94.streamlock.net/pdsertaotv/pdsertaotv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:b6fb9b20f35222a1aa8ad028473abcd09888762b": {
+    "fail_count": 0,
+    "genres": [
+      "Notícias",
+      "Comunitária"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/f0743109-9172-4ded-bedc-b20d87b5aabb.webp",
+    "name": "CNU",
+    "streams": [
+      "https://br5093.streamingdevideo.com.br/wbgpymgwys/wbgpymgwys/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:b85f72e0ba0c8f0f1ae8e45d56ad6c97563e1911": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a46ad02b-e86a-40c7-bf73-20eca69a70da.png",
+    "name": "TV Grande Natal",
+    "streams": [
+      "https://tvgrandenatalhdtv.duckdns.org:3334/hls/live.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:bb5f5fa8a6fd1ee14466de3b48cf521ffa75ee3b": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a10509e5-7807-43fd-a4b7-84e4e6f613ff.png",
+    "name": "TV Cruzeiro do Brasil",
+    "streams": [
+      "https://stmv2.voxtvhd.com.br/joao1366/joao1366/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:bb70b7ea4ecef88447e3dc0aa01b4eae410c4423": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1645b1a8-86e6-4dac-86d1-80cc6112a871.webp",
+    "name": "IJUÍ PLAY",
+    "streams": [
+      "https://video04.logicahost.com.br/schamlztv/schamlztv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:bbf138f15fcebaa1b297f9d24d346417f08929ee": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/80e6dc17-807b-4293-9727-545ce328ac7d.png",
+    "name": "TV Onix",
+    "streams": [
+      "https://tv02.zas.media:1936/tvonix/tvonix/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:bc94bf8bd0eef73d16d86c2bbf9940468c50d4ca": {
+    "fail_count": 0,
+    "genres": [
+      "Filmes",
+      "Séries"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/cd36a21b-27cf-4f76-bfab-7b6641bd849d.webp",
+    "name": "Miami Vice e Convidados",
+    "streams": [
+      "https://video05.logicahost.com.br/miamivice/miamivice/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:be2279a0ec788442ba1403fed0e2e0c01cc2e27d": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Regional"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/ee68bf4e-af00-4515-9b5e-9b0a76b91310.png",
+    "name": "Bem+ TV",
+    "streams": [
+      "https://video09.logicahost.com.br/bemmaistv01/bemmaistv01/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:bf2256f98af81091760e38df5e7e86c7d9b6623b": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "WebTV"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/f8005e9e-7c4a-4760-b741-281d92078c26.png",
+    "name": "Clouding TV",
+    "streams": [
+      "https://video04.logicahost.com.br/cloudingtv/cloudingtv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:bf4ba87a3b008934a37301c82bf584367847a31f": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/f96275fa-62d0-43bf-97d2-acd86baaf27f.png",
+    "name": "TV One Belém",
+    "streams": [
+      "https://video02.logicahost.com.br/tvone/tvone/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:c34e7a4d57d8b3ab531e041564ec865f87af30ea": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Jovem",
+      "Religioso"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/dbfade5a-4d45-42fe-ae8f-727ae30ac514.png",
+    "name": "Ldnews TV",
+    "streams": [
+      "https://stmv3.voxtvhd.com.br/leandroenzo/leandroenzo/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:c368e7fcfb97dc74ba0b69670837fbbe06a6abef": {
+    "fail_count": 0,
+    "genres": [
+      "Filmes",
+      "WebTV"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/88bb07ee-edc4-4f09-9376-bf9d16a09eab.png",
+    "name": "MEGA ONE TV",
+    "streams": [
+      "https://stmv6.voxtvhd.com.br/megaonetv/megaonetv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:c471b9e9826038b496e4256b71a452112c82e947": {
+    "fail_count": 0,
+    "genres": [
+      "Desenhos"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/b7430363-60f3-4ae5-84a4-4836d93aa4d1.webp",
+    "name": "Kanuca TV Brasil",
+    "streams": [
+      "https://video08.logicahost.com.br/kanucatv/kanucatv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:c6cb98a6e2882fdc7f5e6d018daea305fdf9515d": {
+    "fail_count": 0,
+    "genres": [
+      "Jovem",
+      "Top 40"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/f9b8e8ee-192f-44e6-9527-b6cd443fea5b.png",
+    "name": "Rádio AMC",
+    "streams": [
+      "https://radioamc.com.br/stream/amc"
+    ],
+    "url": ""
+  },
+  "stream:c7cc97b186d7bc73edf0f1099c5979cf5f3dcfe5": {
+    "fail_count": 0,
+    "genres": [
+      "Religioso"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/86454128-ca12-419e-8fec-7f2826cb7b47.webp",
+    "name": "TV Avivando Nações",
+    "streams": [
+      "https://video04.logicahost.com.br/tvavivandonacoes/tvavivandonacoes/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:c7dde7a0b4ef45a7fb29271032399c8ebfe180fa": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a468840e-2f63-442e-8bda-7432f6d11cd8.webp",
+    "name": "TV Paradise",
+    "streams": [
+      "https://stmv5.samcast.com.br/marcos3057/marcos3057/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:ca3021259bf1a0e6c962ddf562440aa6f7b02580": {
+    "fail_count": 0,
+    "genres": [
+      "Jornalismo",
+      "Esportes",
+      "Talk"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/220a812f-4f07-4545-92fa-faad98335a63.png",
+    "name": "Bandeirantes - 86,3 FM",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/RadioBandeirantesAAC.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:ccca507cc3b9a2df75b29bec4d9f4b322caa303a": {
+    "fail_count": 0,
+    "genres": [
+      "WebTV"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/d5b8608f-d03c-4970-a99d-41265094f2bb.png",
+    "name": "F.Kids",
+    "streams": [
+      "https://stmv2.srvif.com/emlsilva/emlsilva/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:ce26b2a2e14f949139aa3bbe6e9f677229813916": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades",
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/078f6f00-7748-4797-a30a-d59d8b16cc19.png",
+    "name": "TV Brusque",
+    "streams": [
+      "https://video01.logicahost.com.br/tvbrusque/tvbrusque/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:ce655b1e3d35874a4200d65ac32ea2cd89099980": {
+    "fail_count": 0,
+    "genres": [
+      "Evangélico"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/963139c7-014a-4bc3-833c-c6f4122225ce.png",
+    "name": "FONTE - 92.3 FM",
+    "streams": [
+      "https://srv2.zcast.com.br/erick8105/erick8105/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:cf45f300ea3d15fc9261c72b324f467eb3c101b8": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Filmes",
+      "Séries"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/e5d00b1e-4787-48d4-8b86-e9dd05a0aa52.webp",
+    "name": "MVERSO TELEVISÃO",
+    "streams": [
+      "https://stv1.voxbr.com.br/gustavo10575/gustavo10575/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:d240a78b9586a929660f0aa61db556fa10f1d5d5": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Comunitária"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/c556f3ed-4405-4a3a-b104-fbd179caec51.webp",
+    "name": "TV Cidade Farroupilha",
+    "streams": [
+      "https://video10.logicahost.com.br/cidadefarroupilha/cidadefarroupilha/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:d3ff1452d50a525bcc54e176ee9a4f213d6935a1": {
+    "fail_count": 0,
+    "genres": [
+      "Jovem",
+      "Variedades",
+      "Humor"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/103f597f-0ed1-4435-9a6a-d8e41b489acf.png",
+    "name": "Rede 98 - 98,3 FM",
+    "streams": [
+      "https://9554.brasilstream.com.br/stream?nocache=1751553969970"
+    ],
+    "url": ""
+  },
+  "stream:d77d771f04b935fc4daccc04019e7410f7348e71": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/45f3e568-60c2-4f0f-b349-385b71536e92.webp",
+    "name": "TVBC",
+    "streams": [
+      "https://stmv2.samcast.com.br/sandro9822/sandro9822/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:d7d23756e329d02e3ea726bf50704143ea0ef350": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/af9b5d90-b9c4-484c-910b-e1a9f26403b9.png",
+    "name": "TV Plan",
+    "streams": [
+      "https://live.cdn.upx.com/723b/myStream.sdp/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:d8c769ca49b7ccb22144c5224e946a0db8b04d02": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/c73f368f-f0b4-4bab-be4f-26acd2583084.png",
+    "name": "TV Montanha",
+    "streams": [
+      "https://stmv1.srvif.com/tvmontana/tvmontana/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:dffbb9d2404e19e8e68b7f29c4c9084543a5db6b": {
+    "fail_count": 0,
+    "genres": [
+      "Notícias",
+      "Jornalismo"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/fa0f9a8a-6221-4487-9ad4-5a4f6f3f2088.png",
+    "name": "Rádio Jornal - 90,3 FM",
+    "streams": [
+      "https://player-ne10-radiojornal-app.stream.uol.com.br/live/radiojornalrecifeapp_lsd.m3u8?vhost=player-ne10-radiojornal-app.stream.uol.com.br"
+    ],
+    "url": ""
+  },
+  "stream:e1967a17bab5af58cbceb8ad8e2bdbe5c836aee0": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "WebTV"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1753663100102-cabecalho-6806-20210603100909.webp",
+    "name": "Rede SPTV",
+    "streams": [
+      "https://video01.logicahost.com.br/websptv/websptv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:e25b24452722f95c1f8a7fdc9dd692a4068d4aca": {
+    "fail_count": 0,
+    "genres": [
+      "Esportes",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/5cd367a6-9002-4d98-b0bb-4566e7da2d5c.webp",
+    "name": "RS PLAY",
+    "streams": [
+      "https://tv03.zas.media:1936/rsplay/rsplay/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:e2d7609f1e0d44ccd2d36767358383983f3eef17": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Religioso"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/d240ed0e-fc1a-473a-bcb2-dbbb0aec3c6a.png",
+    "name": "TV CESP (Comunidade Evangélica De São Paulo)",
+    "streams": [
+      "https://stmv7.voxtvhd.com.br/pralan/pralan/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:e4061ef20c827167e0f9850958ab1c7c701642df": {
+    "fail_count": 0,
+    "genres": [
+      "Religioso"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1752294606276-Logotipo_da_TV_Aparecida.webp",
+    "name": "TV Aparecida",
+    "streams": [
+      "https://cdn.live.br1.jmvstream.com/w/LVW-9716/LVW9716_HbtQtezcaw/chunklist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:e434a1f578161a5586d9cf395a0088baa993bb60": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/829c2475-df02-47c4-9be3-438d92da911a.png",
+    "name": "Rede UTV",
+    "streams": [
+      "https://utvsite.acessaradios.com.br/utvsite/utvsite.stream/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:e434f5c54dbb9ce51c859a1cff407b238fef71c9": {
+    "fail_count": 0,
+    "genres": [
+      "Filmes",
+      "Religioso",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/03d2f896-e00f-4c5c-b164-88be817b6e9c.webp",
+    "name": "TV JSHD",
+    "streams": [
+      "https://stmv3.voxtvhd.com.br/jshdtv/jshdtv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:e4a00bde57a06edec09f1e9e90ad6eabd59b9c80": {
+    "fail_count": 0,
+    "genres": [
+      "Animes",
+      "Música",
+      "Regional"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/ca174535-55b8-45b1-a223-7e0b85bc50b1.png",
+    "name": "Wording de Televisão",
+    "streams": [
+      "https://tv02.zas.media:1936/wordingtv/wordingtv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:e4b5ee28dd1a2ee341952aa3f9df741fd91b245c": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/3fa3bfd8-41c9-4043-82aa-084c641c02ba.png",
+    "name": "Blits TV",
+    "streams": [
+      "https://stmv1.transmissaodigital.com/blitstv/blitstv/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:e56226598e7c1ca928aa6ef7277595cf8d7da1e1": {
+    "fail_count": 0,
+    "genres": [
+      "WebTV"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/e55c1d33-ee7c-4d31-903f-bbec1ff6bcf7.png",
+    "name": "TV Aracati",
+    "streams": [
+      "https://video04.logicahost.com.br/tvaracati/tvaracati/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:e72938d415b59550362046d91bd24a12268e5e95": {
+    "fail_count": 0,
+    "genres": [
+      "Notícias",
+      "Jornalismo"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/848ba87d-23ed-4706-9e35-4f00ba26d03d.webp",
+    "name": "Rádio POP - 89,3 FM",
+    "streams": [
+      "https://streaming.engelhosting.com.br:10018/stream?xttv.com.br"
+    ],
+    "url": ""
+  },
+  "stream:e9f98fa3caf898be74cbc4fae7ac5583bb92206a": {
+    "fail_count": 0,
+    "genres": [
+      "Esportes",
+      "Jornalismo"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/59bd26f0-bf2a-449f-b3e7-d9834f64c5e5.png",
+    "name": "Super Rádio Tupi - 96,5 FM",
+    "streams": [
+      "https://8923.brasilstream.com.br/stream?origem=site-xttv.com.br"
+    ],
+    "url": ""
+  },
+  "stream:eb28ae550cd99a67d74854bd98d8f33945e5b992": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Games",
+      "Esportes"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/68b8e282-4fc3-48b4-bb4a-f423820a584c.png",
+    "name": "Nacional Plus",
+    "streams": [
+      "https://stmv.webtvninjas.com.br/nacionalplus2/nacionalplus2/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:ed9a088f46d27c55ebfe2e42d89d933d9e286ce8": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/3f16a049-ec67-4d91-bdf2-a64b9a085784.png",
+    "name": "TV Meio",
+    "streams": [
+      "https://isaocorp.cloudecast.com/redemeio/tracks-v1a1/mono.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:f31fab58cb7c24c492479a3694484cf9df21f1ba": {
+    "fail_count": 0,
+    "genres": [
+      "Esportes"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/737554d2-9056-409b-bb29-a0101f0c377d.png",
+    "name": "GETV",
+    "streams": [
+      "https://dfr80qz435crc.cloudfront.net/EFGH/Amagi/Globo/GE_Fast_BR/GE_Fast.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:f49624bb91223bd7dc5285b7df57aad001abe811": {
+    "fail_count": 0,
+    "genres": [
+      "Música"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/04dbe407-636b-4e67-b449-e00a3dea8c16.webp",
+    "name": "TV 100% Caipira",
+    "streams": [
+      "https://video10.logicahost.com.br/caipira/caipira/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:f6392eca2943ce04fa0b9fdb63d48f44fc761ec8": {
+    "fail_count": 0,
+    "genres": [
+      "Reality"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/9568926d-fd6b-4725-ae31-cbe9d708dc39.png",
+    "name": "TVI Reality",
+    "streams": [
+      "https://video-auth7.iol.pt/live_tvi_reality/live_tvi_reality/edge_servers/tvireality-720_passthrough/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9OS8yMS8yMDI2IDg6MTA6MCBQTSZoYXNoX3ZhbHVlPWplZmgwd2RkbzA1bFd5SUJuemsrUFE9PSZ2YWxpZG1pbnV0ZXM9MTQ0MCZpZD0zNzE0ZDlkNi03YjZiLTQ3ZjctYWFhNS00ZDg3MTEwMDBlOWY="
+    ],
+    "url": ""
+  },
+  "stream:f642967bed7cb87fc306e016252c5f1eed58d6c4": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades",
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/e59c1316-6576-4c3f-9a6c-ec265e292909.png",
+    "name": "TV Aratu",
+    "streams": [
+      "https://cdn.live.br1.jmvstream.com/w/LVW-9359/LVW9359_XSyReL0QVf/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:f771abc464f495577ee33f10843d67a9d3fba386": {
+    "fail_count": 0,
+    "genres": [
+      "Notícias"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/3069cae9-9e35-42cb-941a-3d54d9de2cf5.webp",
+    "name": "TV Serrana",
+    "streams": [
+      "https://video10.logicahost.com.br/tvserrana/tvserrana/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:fcbbe8d7094abf0e4ea4d9a425ee124c1a9a965e": {
+    "fail_count": 0,
+    "genres": [
+      "Jornalismo",
+      "Notícias",
+      "Esportes"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/98ddc1c8-e4a8-412a-9a05-40d240b5895d.png",
+    "name": "Rádio Sociedade - 102,5 FM",
+    "streams": [
+      "https://painel.sintonizar.tv.br/stream/sociedadeaudio/stream"
+    ],
+    "url": ""
+  },
+  "stream:fe917185e16cebf223ad287dbc5d06a432ff6874": {
+    "fail_count": 0,
+    "genres": [
+      "Variedades",
+      "Novelas"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/19cc299f-a356-4d66-ae7e-28da401f4ac9.webp",
+    "name": "RTP1",
+    "streams": [
+      "https://streaming-live.rtp.pt/liverepeater/smil:rtp1HD.smil/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:fee093b84f6d909d732be400331165ae504b9bc5": {
+    "fail_count": 0,
+    "genres": [
+      "Desenhos",
+      "Religioso"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/668eaf5a-a317-400e-a22e-3031146068a4.webp",
+    "name": "TV Brasil Angola",
+    "streams": [
+      "https://video10.logicahost.com.br/tvbrasilangola/tvbrasilangola/playlist.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:ff241eea0b7f38c294c99e0984c403ce10060310": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1753663439013-logo_face-5401-20250224014925.webp",
+    "name": "TV Clube",
+    "streams": [
+      "https://5c483b9d1019c.streamlock.net/8186/8186/chunklist_w2042723446.m3u8"
+    ],
+    "url": ""
+  },
+  "stream:ffdf81a0e1b08987358fbddeb30488e166952314": {
+    "fail_count": 0,
+    "genres": [
+      "Regional",
+      "Variedades"
+    ],
+    "last_ok": 1791223095,
+    "logo": "https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/0b926d89-e726-4f02-8c65-8fe5df0bef46.png",
+    "name": "Rede Brasil",
+    "streams": [
+      "https://video09.logicahost.com.br/redebrasiloficial/redebrasiloficial/chunklist_w53468055.m3u8"
+    ],
+    "url": ""
+  }
+}
