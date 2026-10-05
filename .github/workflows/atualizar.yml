@@ -11,7 +11,7 @@ permissions:
 jobs:
   atualizar:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 60
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -29,22 +29,20 @@ jobs:
           pip install -r requirements.txt
           python -m playwright install --with-deps chromium
 
-      - name: Validar script
-        run: python -m py_compile gerar_m3u.py
-
       - name: Gerar M3U
         env:
           MAX_CATEGORY_PAGES: '200'
           CONCURRENCY: '4'
           FAILS_TO_REMOVE: '2'
-          PAGE_TIMEOUT_MS: '45000'
-          NEXT_WAIT_MS: '1200'
+          PAGE_TIMEOUT_MS: '60000'
+          WAIT_CATEGORY_MS: '3500'
+          WAIT_NEXT_MS: '1800'
         run: python gerar_m3u.py
 
       - name: Publicar alterações
         run: |
           git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config user.email '41898282+github-actions[bot]@github.com'
           git add lista.m3u canais.json
           git diff --cached --quiet || git commit -m 'Atualizar lista M3U XTTV'
           git push
