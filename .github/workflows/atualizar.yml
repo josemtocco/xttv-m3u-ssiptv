@@ -1,27 +1,32 @@
 name: Atualizar M3U XTTV
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 */6 * * *'
-  workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: xttv-m3u
+  cancel-in-progress: false
+
 jobs:
   atualizar:
-    runs-on: ubuntu-latest
-    timeout-minutes: 60
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
     steps:
       - name: Checkout
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
-      - name: Python
+      - name: Python 3.12
         uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+          cache: pip
 
       - name: Dependências
         run: |
@@ -29,20 +34,30 @@ jobs:
           pip install -r requirements.txt
           python -m playwright install --with-deps chromium
 
-      - name: Gerar M3U
+      - name: Gerar M3U XTTV
         env:
+          HEADLESS: '1'
           MAX_CATEGORY_PAGES: '200'
-          CONCURRENCY: '4'
+          MAX_STATIONS: '10000'
+          PAGE_TIMEOUT_MS: '45000'
+          STREAM_WAIT_MS: '10000'
           FAILS_TO_REMOVE: '2'
-          PAGE_TIMEOUT_MS: '60000'
-          WAIT_CATEGORY_MS: '3500'
-          WAIT_NEXT_MS: '1800'
+          VALIDATE_STREAMS: 'true'
         run: python gerar_m3u.py
 
       - name: Publicar alterações
         run: |
           git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@github.com'
-          git add lista.m3u canais.json
-          git diff --cached --quiet || git commit -m 'Atualizar lista M3U XTTV'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add lista.m3u canais.json xttv_debug/api_respostas.json xttv_debug/streams_rede.json
+          git diff --cached --quiet && echo 'Nenhuma alteração.' || git commit -m 'Atualiza lista XTTV'
           git push
+
+      - name: Artefatos de diagnóstico
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: xttv-debug
+          path: xttv_debug/
+          retention-days: 7
+          if-no-files-found: ignore
