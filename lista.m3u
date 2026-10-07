@@ -315,6 +315,8 @@ https://cdn.live.br1.jmvstream.com/webtv/AVJ-15538/playlist/playlist.m3u8
 https://stmv1.srvif.com/tvmontana/tvmontana/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-paradise" tvg-name="TV Paradise" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a468840e-2f63-442e-8bda-7432f6d11cd8.webp" group-title="Variedades",TV Paradise
 https://stmv5.samcast.com.br/marcos3057/marcos3057/playlist.m3u8
+#EXTINF:-1 tvg-id="tv-singular" tvg-name="Tv Singular" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/9205aa0e-165b-49b4-8dbb-fdfffc44e833.webp" group-title="Variedades",Tv Singular
+https://stmv3.srvsh.com.br/danielsantos1659/danielsantos1659/chunklist_w1641089829.m3u8
 #EXTINF:-1 tvg-id="tv-tudo" tvg-name="TV TUDO" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/2f6c1b27-b2e3-40f9-96ee-db7757c56047.webp" group-title="Variedades",TV TUDO
 https://tv02.zas.media:1936/tvtudo/tvtudo/playlist.m3u8
 #EXTINF:-1 tvg-id="vtr-channel" tvg-name="VTR Channel" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/87fed7f4-ffb5-4927-a206-c7e6386fa984.webp" group-title="Variedades",VTR Channel
@@ -323,6 +325,8 @@ https://sistemavrt2023.vrtchannel.tv.br:3626/hybrid/play.m3u8
 https://video09.logicahost.com.br/tvgazin/tvgazin/playlist.m3u8
 #EXTINF:-1 tvg-id="awtv" tvg-name="AWTV" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/605b5b57-d03e-4417-85a1-5a0bdfadc94a.png" group-title="WebTV",AWTV
 https://awtv.nuvemplay.live/hls/stream.m3u8
+#EXTINF:-1 tvg-id="brks-tv" tvg-name="BRKS TV" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/6b26ab62-915d-42b3-8302-a7e6f93c9b40.png" group-title="WebTV",BRKS TV
+https://stmv8.samcast.com.br/alvaro9088/alvaro9088/playlist.m3u8
 #EXTINF:-1 tvg-id="bs-tv-online" tvg-name="BS-TV Online" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/dd52b9ee-430a-49a0-8458-2e7c7ab0bc23.png" group-title="WebTV",BS-TV Online
 https://video05.logicahost.com.br/gbsstudio/gbsstudio/playlist.m3u8
 #EXTINF:-1 tvg-id="cbtv" tvg-name="CBTV" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/6546166a-f9b6-4b58-bb4f-af01675667b7.png" group-title="WebTV",CBTV
