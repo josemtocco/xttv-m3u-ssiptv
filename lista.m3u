@@ -1,4 +1,6 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="brks-tv" tvg-name="BRKS TV" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/8659115e-9950-4df0-965c-59b5876fca39.webp" group-title="Animes",BRKS TV
+https://stmv8.samcast.com.br/alvaro9088/alvaro9088/playlist.m3u8
 #EXTINF:-1 tvg-id="tvnilcera" tvg-name="TvNilcera" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/15237629-508f-42fc-90f8-f0e07287ef4e.png" group-title="Animes",TvNilcera
 https://lbgo.bozztv.com/ssh101/ssh101/tvnilcera/playlist.m3u8
 #EXTINF:-1 tvg-id="wording-de-televis-o" tvg-name="Wording de Televisão" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/ca174535-55b8-45b1-a223-7e0b85bc50b1.png" group-title="Animes",Wording de Televisão
@@ -309,6 +311,8 @@ https://tvgrandenatalhdtv.duckdns.org:3334/hls/live.m3u8
 https://streaming.cloudecast.com/hls/tvlifeamerica/index.m3u8
 #EXTINF:-1 tvg-id="tv-litoral-rn" tvg-name="TV Litoral RN" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/820cc799-ef1e-4b66-8284-a491118f203f.png" group-title="Variedades",TV Litoral RN
 https://5ad482a77183d.streamlock.net/tvnordesteegmail.com/tvnordesteegmail.com/playlist.m3u8
+#EXTINF:-1 tvg-id="tv-maischeti" tvg-name="TV Maischeti" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/d670e2b5-8d33-42e8-b99e-410500e970f5.webp" group-title="Variedades",TV Maischeti
+https://stmv6.voxtvhd.com.br/tvmaischeti/tvmaischeti/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-max-90" tvg-name="TV Max 90" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/64424b30-94b9-4213-95bb-61d31e907f2d.webp" group-title="Variedades",TV Max 90
 https://cdn.live.br1.jmvstream.com/webtv/AVJ-15538/playlist/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-montanha" tvg-name="TV Montanha" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/c73f368f-f0b4-4bab-be4f-26acd2583084.png" group-title="Variedades",TV Montanha
@@ -325,8 +329,6 @@ https://sistemavrt2023.vrtchannel.tv.br:3626/hybrid/play.m3u8
 https://video09.logicahost.com.br/tvgazin/tvgazin/playlist.m3u8
 #EXTINF:-1 tvg-id="awtv" tvg-name="AWTV" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/605b5b57-d03e-4417-85a1-5a0bdfadc94a.png" group-title="WebTV",AWTV
 https://awtv.nuvemplay.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="brks-tv" tvg-name="BRKS TV" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/6b26ab62-915d-42b3-8302-a7e6f93c9b40.png" group-title="WebTV",BRKS TV
-https://stmv8.samcast.com.br/alvaro9088/alvaro9088/playlist.m3u8
 #EXTINF:-1 tvg-id="bs-tv-online" tvg-name="BS-TV Online" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/dd52b9ee-430a-49a0-8458-2e7c7ab0bc23.png" group-title="WebTV",BS-TV Online
 https://video05.logicahost.com.br/gbsstudio/gbsstudio/playlist.m3u8
 #EXTINF:-1 tvg-id="cbtv" tvg-name="CBTV" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/6546166a-f9b6-4b58-bb4f-af01675667b7.png" group-title="WebTV",CBTV
