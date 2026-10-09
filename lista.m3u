@@ -243,6 +243,8 @@ https://cdn.live.br1.jmvstream.com/w/LVW-9730/LVW9730_LmUwslM8jt/playlist.m3u8
 https://stmv2.samcast.com.br/sandro9822/sandro9822/playlist.m3u8
 #EXTINF:-1 tvg-id="tvci" tvg-name="TVCI" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1aa1cfbe-3b25-4a1d-9f8d-8fe0dc785178.png" group-title="Regional",TVCI
 https://cpbr.appflux.com.br:2000/hls/tvcilive/tvcilive.m3u8
+#EXTINF:-1 tvg-id="atriostv" tvg-name="ATRIOSTV" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/0a7a3dbf-b288-4974-89e6-b0a2031a5496.png" group-title="Religioso",ATRIOSTV
+https://stmv5.voxtvhd.com.br/atriostv/atriostv/playlist.m3u8
 #EXTINF:-1 tvg-id="minist-rio-infantil-tv" tvg-name="Ministério Infantil TV" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/02decbf6-d666-409e-87c2-725ed7f447c5.png" group-title="Religioso",Ministério Infantil TV
 https://stmv4.voxtvhd.com.br/1990/1990/playlist.m3u8
 #EXTINF:-1 tvg-id="r-dio-evangelizar-99-5-fm" tvg-name="Rádio Evangelizar - 99,5 FM" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/f309950a-5dc8-4a24-9cc4-1148fc03bd57.png" group-title="Religioso",Rádio Evangelizar - 99,5 FM
