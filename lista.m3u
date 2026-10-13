@@ -263,6 +263,8 @@ https://video09.logicahost.com.br/paieterno/paieterno/playlist.m3u8
 https://s1.tvr.ovh/video10934/video10934/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-sonora" tvg-name="TV Sonora" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/bb2a0b36-8925-4c3d-b4cd-bed8351de755.png" group-title="Religioso",TV Sonora
 https://video01.brascast.com/xavier4499/xavier4499/playlist.m3u8
+#EXTINF:-1 tvg-id="rede-classic" tvg-name="Rede Classic" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1278834a-6215-467c-adba-18fd7a09a83d.png" group-title="Séries",Rede Classic
+https://srv2.zcast.com.br/redenovelas/redenovelas/playlist.m3u8
 #EXTINF:-1 tvg-id="maisum" tvg-name="+MaisUm" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/69f45c3a-c243-44b1-87de-352ec5f8674f.png" group-title="Variedades",+MaisUm
 https://stream.ichibansys.com:3230/hybrid/play.m3u8
 #EXTINF:-1 tvg-id="adesso-tv" tvg-name="Adesso TV" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/cbee899a-25dc-42e3-b50c-60fc86687e5a.webp" group-title="Variedades",Adesso TV
