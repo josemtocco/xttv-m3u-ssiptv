@@ -259,8 +259,6 @@ https://stmv6.voxtvhd.com.br/j1casa/j1casa/playlist.m3u8
 https://stmv7.voxtvhd.com.br/liberdadebetel/liberdadebetel/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-pai-eterno" tvg-name="TV Pai Eterno" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/ace2571e-0e18-491e-bb5b-0de75cb4d647.png" group-title="Religioso",TV Pai Eterno
 https://video09.logicahost.com.br/paieterno/paieterno/playlist.m3u8
-#EXTINF:-1 tvg-id="tv-rabelo" tvg-name="TV Rabelo" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/0009d1b0-da4b-4118-abdb-b4f3b283cca5.png" group-title="Religioso",TV Rabelo
-https://s1.tvr.ovh/video10934/video10934/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-sonora" tvg-name="TV Sonora" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/bb2a0b36-8925-4c3d-b4cd-bed8351de755.png" group-title="Religioso",TV Sonora
 https://video01.brascast.com/xavier4499/xavier4499/playlist.m3u8
 #EXTINF:-1 tvg-id="rede-classic" tvg-name="Rede Classic" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1278834a-6215-467c-adba-18fd7a09a83d.png" group-title="Séries",Rede Classic
@@ -307,8 +305,6 @@ https://video11.logicahost.com.br/tvcar/tvcar/playlist.m3u8
 https://video10.logicahost.com.br/tvcidade10/tvcidade10/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-cruzeiro-do-brasil" tvg-name="TV Cruzeiro do Brasil" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a10509e5-7807-43fd-a4b7-84e4e6f613ff.png" group-title="Variedades",TV Cruzeiro do Brasil
 https://cdn.live.br1.jmvstream.com/webtv/tvcruzeiro/playlist/chunklist.m3u8
-#EXTINF:-1 tvg-id="tv-cruzeiro-do-brasil" tvg-name="TV Cruzeiro do Brasil" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a10509e5-7807-43fd-a4b7-84e4e6f613ff.png" group-title="Variedades",TV Cruzeiro do Brasil
-https://stmv2.voxtvhd.com.br/joao1366/joao1366/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-do-povo-erechim" tvg-name="TV Do Povo Erechim" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/35cdb5ee-62f2-45aa-a082-c06e295c4b21.webp" group-title="Variedades",TV Do Povo Erechim
 https://stmv1.voxtvhd.com.br/tvdopovo/tvdopovo/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-grande-natal" tvg-name="TV Grande Natal" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a46ad02b-e86a-40c7-bf73-20eca69a70da.png" group-title="Variedades",TV Grande Natal
