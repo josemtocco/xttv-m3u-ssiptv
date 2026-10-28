@@ -1,6 +1,18 @@
 [
   {
-    "url": "https://sistemavrt2023.vrtchannel.tv.br:3626/hybrid/play.m3u8",
+    "url": "https://stmv5.samcast.com.br/val4355/val4355/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://5c483b9d1019c.streamlock.net/8186/8186/chunklist_w2042723446.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://5c483b9d1019c.streamlock.net/8186/8186/chunklist_w2042723446.m3u8",
     "status": 200,
     "type": "response",
     "content_type": "application/vnd.apple.mpegurl"
@@ -36,271 +48,193 @@
     "content_type": "text/html"
   },
   {
-    "url": "https://awtv.nuvemplay.live/hls/stream.m3u8",
+    "url": "https://stmv8.samcast.com.br/tvmaisbrasil/tvmaisbrasil/playlist.m3u8",
     "status": 200,
     "type": "response",
     "content_type": "application/vnd.apple.mpegurl"
   },
   {
-    "url": "https://awtv.nuvemplay.live/hls/stream-112597.ts",
+    "url": "https://stmv8.samcast.com.br/tvmaisbrasil/tvmaisbrasil/playlist.m3u8",
     "status": 200,
     "type": "response",
-    "content_type": "video/mp2t"
+    "content_type": "application/vnd.apple.mpegurl"
   },
   {
-    "url": "https://awtv.nuvemplay.live/hls/stream.m3u8",
-    "status": 500,
+    "url": "https://video01.logicahost.com.br/websptv/websptv/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://video01.logicahost.com.br/websptv/websptv/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://video01.logicahost.com.br/websptv/websptv/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://video01.logicahost.com.br/websptv/websptv/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://video01.logicahost.com.br/websptv/websptv/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://video05.logicahost.com.br/gbsstudio/gbsstudio/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://video05.logicahost.com.br/gbsstudio/gbsstudio/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://video05.logicahost.com.br/gbsstudio/gbsstudio/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://video05.logicahost.com.br/gbsstudio/gbsstudio/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://video05.logicahost.com.br/gbsstudio/gbsstudio/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://tv02.zas.media:1936/wordingtv/wordingtv/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://tv02.zas.media:1936/wordingtv/wordingtv/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://tv02.zas.media:1936/wordingtv/wordingtv/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://tv02.zas.media:1936/wordingtv/wordingtv/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://video01.brascast.com/grezzana1839/grezzana1839/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://video09.logicahost.com.br/bemmaistv01/bemmaistv01/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://video09.logicahost.com.br/bemmaistv01/bemmaistv01/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://video09.logicahost.com.br/bemmaistv01/bemmaistv01/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://video09.logicahost.com.br/bemmaistv01/bemmaistv01/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://video09.logicahost.com.br/bemmaistv01/bemmaistv01/playlist.m3u8",
+    "status": 200,
+    "type": "response",
+    "content_type": "application/vnd.apple.mpegurl"
+  },
+  {
+    "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
+    "status": 403,
     "type": "response",
     "content_type": "text/html"
   },
   {
-    "url": "https://awtv.nuvemplay.live/hls/stream.m3u8",
+    "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
+    "status": 403,
+    "type": "response",
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
+    "status": 403,
+    "type": "response",
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
+    "status": 403,
+    "type": "response",
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8",
+    "status": 403,
+    "type": "response",
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://stream.ichibansys.com:3764/hybrid/play.m3u8",
     "status": 200,
     "type": "response",
     "content_type": "application/vnd.apple.mpegurl"
   },
   {
-    "url": "https://awtv.nuvemplay.live/hls/stream-112598.ts",
-    "status": 200,
-    "type": "response",
-    "content_type": "video/mp2t"
-  },
-  {
-    "url": "https://video04.logicahost.com.br/cloudingtv/cloudingtv/playlist.m3u8",
+    "url": "https://stream.ichibansys.com:3764/hybrid/play.m3u8",
     "status": 200,
     "type": "response",
     "content_type": "application/vnd.apple.mpegurl"
   },
   {
-    "url": "https://video04.logicahost.com.br/cloudingtv/cloudingtv/playlist.m3u8",
+    "url": "https://stream.ichibansys.com:3764/hybrid/play.m3u8",
     "status": 200,
     "type": "response",
     "content_type": "application/vnd.apple.mpegurl"
   },
   {
-    "url": "https://video04.logicahost.com.br/cloudingtv/cloudingtv/playlist.m3u8",
+    "url": "https://stream.ichibansys.com:3764/hybrid/play.m3u8",
     "status": 200,
     "type": "response",
     "content_type": "application/vnd.apple.mpegurl"
   },
   {
-    "url": "https://video04.logicahost.com.br/cloudingtv/cloudingtv/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://video04.logicahost.com.br/cloudingtv/cloudingtv/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://live20.bozztv.com/akamaissh101/ssh101/tvnilcera/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://live20.bozztv.com/akamaissh101/ssh101/tvnilcera/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://live20.bozztv.com/akamaissh101/ssh101/tvnilcera/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://live20.bozztv.com/akamaissh101/ssh101/tvnilcera/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://live20.bozztv.com/akamaissh101/ssh101/tvnilcera/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://isaocorp.cloudecast.com/ngt/index.fmp4.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://isaocorp.cloudecast.com/ngt/index.fmp4.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://isaocorp.cloudecast.com/ngt/index.fmp4.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://isaocorp.cloudecast.com/ngt/index.fmp4.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://isaocorp.cloudecast.com/ngt/index.fmp4.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://stream.ichibansys.com:3230/hybrid/play.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://stream.ichibansys.com:3230/hybrid/play.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://stream.ichibansys.com:3230/hybrid/play.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://stream.ichibansys.com:3230/hybrid/play.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://stream.ichibansys.com:3230/hybrid/play.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://isaocorp.cloudecast.com/playtv/index.fmp4.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://isaocorp.cloudecast.com/playtv/index.fmp4.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://isaocorp.cloudecast.com/playtv/index.fmp4.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://isaocorp.cloudecast.com/playtv/index.fmp4.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://isaocorp.cloudecast.com/playtv/index.fmp4.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://video05.logicahost.com.br/gbsstudio/gbsstudio/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://video05.logicahost.com.br/gbsstudio/gbsstudio/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://video05.logicahost.com.br/gbsstudio/gbsstudio/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://video05.logicahost.com.br/gbsstudio/gbsstudio/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://video05.logicahost.com.br/gbsstudio/gbsstudio/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://cdn.live.br1.jmvstream.com/w/LVW-9359/LVW9359_XSyReL0QVf/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://cdn.live.br1.jmvstream.com/w/LVW-9359/LVW9359_XSyReL0QVf/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://cdn.live.br1.jmvstream.com/w/LVW-9359/LVW9359_XSyReL0QVf/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://cdn.live.br1.jmvstream.com/w/LVW-9359/LVW9359_XSyReL0QVf/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://cdn.live.br1.jmvstream.com/w/LVW-9359/LVW9359_XSyReL0QVf/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://video02.logicahost.com.br/tvone/tvone/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://video02.logicahost.com.br/tvone/tvone/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://video02.logicahost.com.br/tvone/tvone/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://video02.logicahost.com.br/tvone/tvone/playlist.m3u8",
-    "status": 200,
-    "type": "response",
-    "content_type": "application/vnd.apple.mpegurl"
-  },
-  {
-    "url": "https://video02.logicahost.com.br/tvone/tvone/playlist.m3u8",
+    "url": "https://stream.ichibansys.com:3764/hybrid/play.m3u8",
     "status": 200,
     "type": "response",
     "content_type": "application/vnd.apple.mpegurl"
