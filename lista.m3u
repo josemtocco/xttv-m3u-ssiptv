@@ -304,6 +304,8 @@ https://video11.logicahost.com.br/tvcar/tvcar/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-cidade-10" tvg-name="TV Cidade 10" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/e73b0f39-f3db-4f7c-bb82-8ff221eada90.webp" group-title="Variedades",TV Cidade 10
 https://video10.logicahost.com.br/tvcidade10/tvcidade10/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-cruzeiro-do-brasil" tvg-name="TV Cruzeiro do Brasil" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a10509e5-7807-43fd-a4b7-84e4e6f613ff.png" group-title="Variedades",TV Cruzeiro do Brasil
+https://painel.redetcb.com.br/api/hls/tvcb2f2cb25f/index.m3u8
+#EXTINF:-1 tvg-id="tv-cruzeiro-do-brasil" tvg-name="TV Cruzeiro do Brasil" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a10509e5-7807-43fd-a4b7-84e4e6f613ff.png" group-title="Variedades",TV Cruzeiro do Brasil
 https://cdn.live.br1.jmvstream.com/webtv/tvcruzeiro/playlist/chunklist.m3u8
 #EXTINF:-1 tvg-id="tv-do-povo-erechim" tvg-name="TV Do Povo Erechim" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/35cdb5ee-62f2-45aa-a082-c06e295c4b21.webp" group-title="Variedades",TV Do Povo Erechim
 https://stmv1.voxtvhd.com.br/tvdopovo/tvdopovo/playlist.m3u8
