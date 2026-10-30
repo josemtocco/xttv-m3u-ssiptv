@@ -3,8 +3,6 @@
 https://stmv8.samcast.com.br/alvaro9088/alvaro9088/playlist.m3u8
 #EXTINF:-1 tvg-id="tvnilcera" tvg-name="TvNilcera" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/15237629-508f-42fc-90f8-f0e07287ef4e.png" group-title="Animes",TvNilcera
 https://lbgo.bozztv.com/ssh101/ssh101/tvnilcera/playlist.m3u8
-#EXTINF:-1 tvg-id="tvnilcera" tvg-name="TvNilcera" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/15237629-508f-42fc-90f8-f0e07287ef4e.png" group-title="Animes",TvNilcera
-https://live20.bozztv.com/akamaissh101/ssh101/tvnilcera/playlist.m3u8
 #EXTINF:-1 tvg-id="wording-de-televis-o" tvg-name="Wording de Televisão" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/ca174535-55b8-45b1-a223-7e0b85bc50b1.png" group-title="Animes",Wording de Televisão
 https://tv02.zas.media:1936/wordingtv/wordingtv/playlist.m3u8
 #EXTINF:-1 tvg-id="xtreme-tv" tvg-name="Xtreme TV" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/bdfbd677-bf5c-4f97-bf94-ee7b4d29ff2b.png" group-title="Animes",Xtreme TV
