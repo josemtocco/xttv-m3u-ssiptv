@@ -84,6 +84,8 @@ https://painel.sintonizar.tv.br/stream/rdcaxias?xttv.com.br
 #EXTINF:-1 tvg-id="yeeaah" tvg-name="YEEAAH" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/fc43a490-6cf7-4385-bb99-cac59d3b2f8b.png" group-title="Games",YEEAAH
 https://srv5.zcast.com.br/yeeaah/yeeaah/playlist.m3u8
 #EXTINF:-1 tvg-id="yeeaah-2" tvg-name="YEEAAH 2" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/034d8fae-7ff6-4054-86d1-64d19635314c.png" group-title="Games",YEEAAH 2
+https://srv3.zcast.com.br/yeeaahdois/yeeaahdois/playlist.m3u8
+#EXTINF:-1 tvg-id="yeeaah-2" tvg-name="YEEAAH 2" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/034d8fae-7ff6-4054-86d1-64d19635314c.png" group-title="Games",YEEAAH 2
 https://srv5.zcast.com.br/yeeaahradio/yeeaahradio/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-c-mara" tvg-name="TV Câmara" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/e3e0ac86-8f91-411c-995a-ccf35a5a5fd9.webp" group-title="Governamental",TV Câmara
 https://stream3.camara.gov.br/tv1/manifest.m3u8
@@ -289,6 +291,8 @@ https://stmv7.voxtvhd.com.br/nbxtv/nbxtv/playlist.m3u8
 https://isaocorp.cloudecast.com/playtv/index.fmp4.m3u8
 #EXTINF:-1 tvg-id="rede-metr-pole" tvg-name="Rede Metrópole" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/fd1b7b4d-9e6a-4b13-9d0c-4da4ff56d945.webp" group-title="Variedades",Rede Metrópole
 https://isaocorp.cloudecast.com/metropole/index.m3u8
+#EXTINF:-1 tvg-id="rede-spi" tvg-name="Rede SPi" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/b99c872a-95cb-4648-9fd2-8004e90e1a16.webp" group-title="Variedades",Rede SPi
+https://video11.logicahost.com.br/redespi/redespi/playlist.m3u8
 #EXTINF:-1 tvg-id="rede-vivax-tv" tvg-name="Rede Vivax TV" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/3a7b9d68-038a-4ced-9d8e-8edb1b3a71c1.webp" group-title="Variedades",Rede Vivax TV
 https://stmv2.samcast.com.br/marcus8647/marcus8647/playlist.m3u8
 #EXTINF:-1 tvg-id="redetv-paran" tvg-name="RedeTV Paraná" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/10f9aac6-dfcd-4181-9d4b-619cab6ee374.webp" group-title="Variedades",RedeTV Paraná
