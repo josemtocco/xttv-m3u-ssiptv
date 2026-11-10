@@ -262,6 +262,8 @@ https://video09.logicahost.com.br/paieterno/paieterno/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-sonora" tvg-name="TV Sonora" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/bb2a0b36-8925-4c3d-b4cd-bed8351de755.png" group-title="Religioso",TV Sonora
 https://video01.brascast.com/xavier4499/xavier4499/playlist.m3u8
 #EXTINF:-1 tvg-id="rede-classic" tvg-name="Rede Classic" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1278834a-6215-467c-adba-18fd7a09a83d.png" group-title="Séries",Rede Classic
+https://stmv7.voxtvhd.com.br/fabio4925/fabio4925/playlist.m3u8
+#EXTINF:-1 tvg-id="rede-classic" tvg-name="Rede Classic" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1278834a-6215-467c-adba-18fd7a09a83d.png" group-title="Séries",Rede Classic
 https://srv2.zcast.com.br/redenovelas/redenovelas/playlist.m3u8
 #EXTINF:-1 tvg-id="maisum" tvg-name="+MaisUm" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/69f45c3a-c243-44b1-87de-352ec5f8674f.png" group-title="Variedades",+MaisUm
 https://stream.ichibansys.com:3230/hybrid/play.m3u8
@@ -306,6 +308,8 @@ https://video11.logicahost.com.br/tvcar/tvcar/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-cidade-10" tvg-name="TV Cidade 10" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/e73b0f39-f3db-4f7c-bb82-8ff221eada90.webp" group-title="Variedades",TV Cidade 10
 https://video10.logicahost.com.br/tvcidade10/tvcidade10/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-cruzeiro-do-brasil" tvg-name="TV Cruzeiro do Brasil" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a10509e5-7807-43fd-a4b7-84e4e6f613ff.png" group-title="Variedades",TV Cruzeiro do Brasil
+https://tcbnacional.redetcb.com.br/api/hls/tv384bf02dac/index.m3u8
+#EXTINF:-1 tvg-id="tv-cruzeiro-do-brasil" tvg-name="TV Cruzeiro do Brasil" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a10509e5-7807-43fd-a4b7-84e4e6f613ff.png" group-title="Variedades",TV Cruzeiro do Brasil
 https://tcbnacional.redetcb.com.br/api/hls/tvf1f7cbd093/index.m3u8
 #EXTINF:-1 tvg-id="tv-do-povo-erechim" tvg-name="TV Do Povo Erechim" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/35cdb5ee-62f2-45aa-a082-c06e295c4b21.webp" group-title="Variedades",TV Do Povo Erechim
 https://stmv1.voxtvhd.com.br/tvdopovo/tvdopovo/playlist.m3u8
@@ -327,6 +331,8 @@ https://stmv5.samcast.com.br/marcos3057/marcos3057/playlist.m3u8
 https://stmv3.srvsh.com.br/danielsantos1659/danielsantos1659/chunklist_w1641089829.m3u8
 #EXTINF:-1 tvg-id="tv-tudo" tvg-name="TV TUDO" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/2f6c1b27-b2e3-40f9-96ee-db7757c56047.webp" group-title="Variedades",TV TUDO
 https://tv02.zas.media:1936/tvtudo/tvtudo/playlist.m3u8
+#EXTINF:-1 tvg-id="viva-web-tv" tvg-name="Viva Web Tv" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a017893d-f6fe-4c69-8d83-e1ef563b9728.png" group-title="Variedades",Viva Web Tv
+https://stmv7.voxtvhd.com.br/lucas3274/lucas3274/playlist.m3u8
 #EXTINF:-1 tvg-id="vtr-channel" tvg-name="VTR Channel" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/87fed7f4-ffb5-4927-a206-c7e6386fa984.webp" group-title="Variedades",VTR Channel
 https://sistemavrt2023.vrtchannel.tv.br:3626/hybrid/play.m3u8
 #EXTINF:-1 tvg-id="tv-gazin" tvg-name="TV Gazin" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/939fa3ee-6341-40db-a5a8-2f26864607f4.webp" group-title="Vendas",TV Gazin
