@@ -329,8 +329,6 @@ https://stmv5.samcast.com.br/marcos3057/marcos3057/playlist.m3u8
 https://stmv3.srvsh.com.br/danielsantos1659/danielsantos1659/chunklist_w1641089829.m3u8
 #EXTINF:-1 tvg-id="tv-tudo" tvg-name="TV TUDO" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/2f6c1b27-b2e3-40f9-96ee-db7757c56047.webp" group-title="Variedades",TV TUDO
 https://tv02.zas.media:1936/tvtudo/tvtudo/playlist.m3u8
-#EXTINF:-1 tvg-id="viva-web-tv" tvg-name="Viva Web Tv" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a017893d-f6fe-4c69-8d83-e1ef563b9728.png" group-title="Variedades",Viva Web Tv
-https://stmv7.voxtvhd.com.br/lucas3274/lucas3274/playlist.m3u8
 #EXTINF:-1 tvg-id="vtr-channel" tvg-name="VTR Channel" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/87fed7f4-ffb5-4927-a206-c7e6386fa984.webp" group-title="Variedades",VTR Channel
 https://sistemavrt2023.vrtchannel.tv.br:3626/hybrid/play.m3u8
 #EXTINF:-1 tvg-id="tv-gazin" tvg-name="TV Gazin" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/939fa3ee-6341-40db-a5a8-2f26864607f4.webp" group-title="Vendas",TV Gazin
