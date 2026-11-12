@@ -289,6 +289,8 @@ https://stmv7.voxtvhd.com.br/nbxtv/nbxtv/playlist.m3u8
 https://isaocorp.cloudecast.com/playtv/index.fmp4.m3u8
 #EXTINF:-1 tvg-id="rede-metr-pole" tvg-name="Rede Metrópole" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/fd1b7b4d-9e6a-4b13-9d0c-4da4ff56d945.webp" group-title="Variedades",Rede Metrópole
 https://isaocorp.cloudecast.com/metropole/index.m3u8
+#EXTINF:-1 tvg-id="rede-novelas-de-televis-o" tvg-name="Rede Novelas De Televisão" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/8d086b6d-0974-47a2-a7c9-41dd1cc6fd99.jpg" group-title="Variedades",Rede Novelas De Televisão
+https://stmv7.voxtvhd.com.br/lucas3274/lucas3274/playlist.m3u8
 #EXTINF:-1 tvg-id="rede-spi" tvg-name="Rede SPi" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/b99c872a-95cb-4648-9fd2-8004e90e1a16.webp" group-title="Variedades",Rede SPi
 https://video11.logicahost.com.br/redespi/redespi/playlist.m3u8
 #EXTINF:-1 tvg-id="rede-vivax-tv" tvg-name="Rede Vivax TV" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/3a7b9d68-038a-4ced-9d8e-8edb1b3a71c1.webp" group-title="Variedades",Rede Vivax TV
