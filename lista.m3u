@@ -331,6 +331,8 @@ https://stmv3.srvsh.com.br/danielsantos1659/danielsantos1659/chunklist_w16410898
 https://tv02.zas.media:1936/tvtudo/tvtudo/playlist.m3u8
 #EXTINF:-1 tvg-id="vtr-channel" tvg-name="VTR Channel" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/87fed7f4-ffb5-4927-a206-c7e6386fa984.webp" group-title="Variedades",VTR Channel
 https://sistemavrt2023.vrtchannel.tv.br:3626/hybrid/play.m3u8
+#EXTINF:-1 tvg-id="web-tv-acau-tropical" tvg-name="Web TV Acauã Tropical" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/81fabd55-7a3e-4161-a7b1-b43ec846b10a.png" group-title="Variedades",Web TV Acauã Tropical
+https://v01.taaqui.org/acauatropical/acauatropical/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-gazin" tvg-name="TV Gazin" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/939fa3ee-6341-40db-a5a8-2f26864607f4.webp" group-title="Vendas",TV Gazin
 https://video09.logicahost.com.br/tvgazin/tvgazin/playlist.m3u8
 #EXTINF:-1 tvg-id="awtv" tvg-name="AWTV" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/605b5b57-d03e-4417-85a1-5a0bdfadc94a.png" group-title="WebTV",AWTV
