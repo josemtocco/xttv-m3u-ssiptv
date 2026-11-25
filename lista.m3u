@@ -77,6 +77,8 @@ https://tvchannel.tvr.ovh/video28392/video28392/playlist.m3u8
 https://stmv3.voxtvhd.com.br/jshdtv/jshdtv/playlist.m3u8
 #EXTINF:-1 tvg-id="tv-latinasat" tvg-name="TV LatinaSat" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/c23df1c1-b376-44b6-9489-78af42b41f74.webp" group-title="Filmes",TV LatinaSat
 https://www.latinasat.com.br/hls/live/stream/index.m3u8
+#EXTINF:-1 tvg-id="tv-nova-juarez" tvg-name="TV Nova Juarez" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1c8ae61c-594a-40d4-adf7-df77f84f9e73.png" group-title="Filmes",TV Nova Juarez
+https://stmv2.webtvninjas.com.br/tvnovajuarez/tvnovajuarez/playlist.m3u8
 #EXTINF:-1 tvg-id="r-dio-hits-106-9-fm" tvg-name="Rádio Hits - 106,9 FM" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/1753587068932-hits-logo-2025-.webp" group-title="Flashback",Rádio Hits - 106,9 FM
 https://wz7.servidoresbrasil.com:9984/stream?xttv.com.br
 #EXTINF:-1 tvg-id="r-dio-caxias-93-5-fm" tvg-name="Rádio Caxias - 93,5 FM" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/3c1adfc5-0456-4ca0-9a19-3fb858831d0f.png" group-title="Futebol",Rádio Caxias - 93,5 FM
@@ -99,6 +101,10 @@ https://stm28.xcast.com.br:11582/stream?xttv.com.br
 https://painel.sintonizar.tv.br/stream/sociedadeaudio/stream
 #EXTINF:-1 tvg-id="canal-start" tvg-name="Canal START" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a3cd1659-7cc4-4dc6-ad3c-53cb5bc9fe68.png" group-title="Jovem",Canal START
 https://srv5.zcast.com.br/canalstart/canalstart/playlist.m3u8
+#EXTINF:-1 tvg-id="comedy-central-webtv" tvg-name="Comedy Central WebTV" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/871a6d14-1474-442b-8f76-14cdb0538488.png" group-title="Jovem",Comedy Central WebTV
+https://stmv2.srvif.com/gafeab/gafeab/playlist.m3u8
+#EXTINF:-1 tvg-id="nick-webtv" tvg-name="Nick WebTV" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/12e78881-bab9-46ef-81e2-da255c2db2f8.png" group-title="Jovem",Nick WebTV
+https://stmv2.srvif.com/nicktoons/nicktoons/playlist.m3u8
 #EXTINF:-1 tvg-id="rede-98-98-3-fm" tvg-name="Rede 98 - 98,3 FM" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/103f597f-0ed1-4435-9a6a-d8e41b489acf.png" group-title="Jovem",Rede 98 - 98,3 FM
 https://9554.brasilstream.com.br/stream?nocache=1751553969970
 #EXTINF:-1 tvg-id="r-dio-amc" tvg-name="Rádio AMC" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/f9b8e8ee-192f-44e6-9527-b6cd443fea5b.png" group-title="Jovem",Rádio AMC
@@ -269,6 +275,8 @@ https://stream.ichibansys.com:3230/hybrid/play.m3u8
 https://cdn.live.br1.jmvstream.com/w/LVW-9715/LVW9715_12B26T62tm/playlist.m3u8
 #EXTINF:-1 tvg-id="alpha-channel" tvg-name="Alpha Channel" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/c9720bbe-3dba-4651-9c94-9055100ec7e9.webp" group-title="Variedades",Alpha Channel
 https://isaocorp.cloudecast.com/alphachannel/index.m3u8
+#EXTINF:-1 tvg-id="band" tvg-name="Band" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a5a24c36-afd0-4f16-a0c6-3fb57062cd59.png" group-title="Variedades",Band
+https://hqf6tcxuhk.singularcdn.net.br/live/019a797e-eeb8-7eda-9518-132403ccb160/s1/playlist_nova-a.m3u8?sjwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImEyODE0ODE2LTI1N2EtNDg1Ny1iNDY1LTM3MmRlMzA2MWI1YiIsImlzcyI6IlNwYWxsYSIsImlhdCI6MTc5NTU0MDA2NiwibmJmIjoxNzk1NTQwMDY2LCJleHAiOjE3OTgxMzIwNjYsInVyaV9zdWIiOiIvMDE5YTc5N2UtZWViOC03ZWRhLTk1MTgtMTMyNDAzY2NiMTYwLyIsInVpZCI6ImEyODE0ODE2LTI1N2EtNDg1Ny1iNDY1LTM3MmRlMzA2MWI1YiIsImJleSI6ZmFsc2UsImlpcCI6ZmFsc2UsImRwciI6ZmFsc2V9.S81YovxWf97ldFHK2HGU_hf5a37lXjBrPpcOShywnes&uid=a2814816-257a-4857-b465-372de3061b5b
 #EXTINF:-1 tvg-id="band" tvg-name="Band" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/a5a24c36-afd0-4f16-a0c6-3fb57062cd59.png" group-title="Variedades",Band
 https://hqf6tcxuhk.singularcdn.net.br/live/019a797e-eeb8-7eda-9518-132403ccb160/s1/playlist_nova-a.m3u8?sjwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImEyODE0ODE2LTI1N2EtNDg1Ny1iNDY1LTM3MmRlMzA2MWI1YiIsImlzcyI6IlNwYWxsYSIsImlhdCI6MTc5MjgxMDU4NiwibmJmIjoxNzkyODEwNTg2LCJleHAiOjE3OTU0MDI1ODYsInVyaV9zdWIiOiIvMDE5YTc5N2UtZWViOC03ZWRhLTk1MTgtMTMyNDAzY2NiMTYwLyIsInVpZCI6ImEyODE0ODE2LTI1N2EtNDg1Ny1iNDY1LTM3MmRlMzA2MWI1YiIsImJleSI6ZmFsc2UsImlpcCI6ZmFsc2UsImRwciI6ZmFsc2V9.g1RE9xuxZJnwjzQsDcKx2unu7IKLHlhOGVgw9Hf4dDc&uid=a2814816-257a-4857-b465-372de3061b5b
 #EXTINF:-1 tvg-id="bem-tv" tvg-name="Bem+ TV" tvg-logo="https://bcknd.xttv.com.br/storage/v1/object/public/station_logos/public/ee68bf4e-af00-4515-9b5e-9b0a76b91310.png" group-title="Variedades",Bem+ TV
